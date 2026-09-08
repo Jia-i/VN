@@ -1,0 +1,51 @@
+﻿title: Start
+---
+<<declare $affection = 0>>
+<<show_background "Bedroom">>
+今天你起了个大早，因为今天是开学第一天。
+你: 哎，不想上学。。。
+但是你还是起床了。
+<<jump AfterSchool>>
+===
+
+title: AfterSchool
+---
+<<show_background "Gate">>
+<<show_sprite "cha_b">>
+你今天答应A今天要跟她一起走。你已经发信息告诉B了，但B还是在校门口等你。
+-> 主动跑过去，问他怎么还没走
+    <<set $affection += 1>>
+    B: 我想等你一起走啊。
+    你只能跟A说下次一起吧，两人一起回家了。
+    当前好感度：{$affection}
+    <<jump SickDay>>
+-> 无视他，继续和A走回家
+    <<set $affection -= 1>>
+    B: 一起回家吗？
+    你: 你今天自己回家先把。
+    B失落地挥挥手，你和A开心地走了。
+    当前好感度：{$affection}
+    <<jump SickDay>>
+===
+
+title: SickDay
+---
+<<show_background "Student_Council_Room">>
+<<show_sprite "cha_b">>
+今天早上他脸红红的，冒着冷汗，你问他怎么了，他笑说没事。
+你有点在意，下课跑去学生会办公室找他，看见他趴在桌子上。
+你: （摸他额头）好烫...
+-> 拉他去保健室
+    <<set $affection += 1>>
+    B: ...谢谢。
+    当前好感度：{$affection}
+-> 去给他买水和退烧药
+    <<set $affection -= 1>>
+    B: 呜呜。。怎么走了。。。
+    当前好感度：{$affection}
+    你: 我买药回来啦！
+    B: 欸。。。
+    B: 你刚刚走了，我还以为你不理我了...
+    <<set $affection += 2>>
+    当前好感度：{$affection}
+===
