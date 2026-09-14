@@ -1,5 +1,6 @@
 ﻿title: Start
 ---
+<<declare $current_node = "Start">>
 <<declare $affection = 0>>
 <<show_background "Bedroom">>
 今天你起了个大早，因为今天是开学第一天。
@@ -10,6 +11,7 @@
 
 title: AfterSchool
 ---
+<<set $current_node = "AfterSchool">>
 <<show_background "Gate">>
 <<show_sprite "cha_b">>
 你今天答应A今天要跟她一起走。你已经发信息告诉B了，但B还是在校门口等你。
@@ -30,6 +32,7 @@ title: AfterSchool
 
 title: SickDay
 ---
+<<set $current_node = "SickDay">>
 <<show_background "Student_Council_Room">>
 <<show_sprite "cha_b">>
 今天早上他脸红红的，冒着冷汗，你问他怎么了，他笑说没事。
