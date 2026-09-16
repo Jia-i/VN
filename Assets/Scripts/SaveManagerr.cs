@@ -1,5 +1,6 @@
 using UnityEngine;
 using Yarn.Unity;
+using TMPro;
 
 public class SaveManager : MonoBehaviour
 {
@@ -8,9 +9,16 @@ public class SaveManager : MonoBehaviour
     public GameObject savePanel;
     public GameObject loadPanel;
 
+    public TMP_Text save1DateText;
+    public TMP_Text save2DateText;
+
+    public TMP_Text load1DateText;
+    public TMP_Text load2DateText;
+
     public void OpenSavePanel()
     {
         savePanel.SetActive(true);
+        UpdateSaveDates();
     }
 
     public void CloseSavePanel()
@@ -21,6 +29,7 @@ public class SaveManager : MonoBehaviour
     public void OpenLoadPanel()
     {
         loadPanel.SetActive(true);
+        UpdateSaveDates();
     }
 
     public void CloseLoadPanel()
@@ -44,9 +53,13 @@ public class SaveManager : MonoBehaviour
 
         PlayerPrefs.SetString(slotName + "_Node", currentNode);
 
-        dialogueRunner.SaveStateToPersistentStorage(slotName);
+        string saveDate = System.DateTime.Now.ToString("dd/MM/yyyy\nhh:mm tt");
+        PlayerPrefs.SetString(slotName + "_Date", saveDate);
 
+        dialogueRunner.SaveStateToPersistentStorage(slotName);
         PlayerPrefs.Save();
+
+        UpdateSaveDates();
 
         Debug.Log("Game Saved: " + slotName + " / " + currentNode);
     }
@@ -73,5 +86,38 @@ public class SaveManager : MonoBehaviour
         dialogueRunner.StartDialogue(currentNode);
 
         Debug.Log("Game Loaded: " + slotName + " / " + currentNode);
+    }
+
+    private void UpdateSaveDates()
+    {
+        string save1Date = PlayerPrefs.GetString(
+            "Save1_Date",
+            "EMPTY"
+        );
+
+        string save2Date = PlayerPrefs.GetString(
+            "Save2_Date",
+            "EMPTY"
+        );
+
+        if (save1DateText != null)
+        {
+            save1DateText.text = save1Date;
+        }
+
+        if (save2DateText != null)
+        {
+            save2DateText.text = save2Date;
+        }
+
+        if (load1DateText != null)
+        {
+            load1DateText.text = save1Date;
+        }
+
+        if (load2DateText != null)
+        {
+            load2DateText.text = save2Date;
+        }
     }
 }
