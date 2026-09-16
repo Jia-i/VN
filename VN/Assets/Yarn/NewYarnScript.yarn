@@ -1,0 +1,75 @@
+﻿title: NewYarnScript
+---
+<<show_date_cutscene "Day1">>
+<<vn_set_background "classroom day">>
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: Good morning.
+Kaede: .......
+<<vn_show_sprite "Kaede" "confused">>
+Kaede: Why you still standing at here?
+->I'm just thinking something
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede:...ok
+->I'm watching you
+    Kaede:...?
+
+<<vn_set_background "corridor day">>
+Hiragi: Watch out!
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: ...!
+
+<<vn_hide_sprite>>
+Hiragi:Ouch....
+Hiragi: (I didn't see her just now...is she okay?)
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: Are you ok?
+Kaede:....
+<<vn_hide_sprite>>
+Hiragi: By the way, this is...
+->a drawing book?
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede:.....
+->I help you to pick up
+    <<vn_show_sprite "Kaede" "smile">>
+    Kaede:...Thank you.
+
+<<jump SecondDay>>
+===
+
+title: SecondDay
+---
+
+<<vn_set_background "classroom day">>
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: Good morning.
+Kaede: .......
+<<vn_show_sprite "Kaede" "confused">>
+Kaede: Why you still standing at here?
+->I'm just thinking something
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede:...ok
+->I'm watching you
+    Kaede:...?
+
+<<vn_set_background "corridor day">>
+Hiragi: Watch out!
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: ...!
+
+<<vn_hide_sprite>>
+Hiragi:Ouch....
+Hiragi: (I didn't see her just now...is she okay?)
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: Are you ok?
+Kaede:....
+<<vn_hide_sprite>>
+Hiragi: By the way, this is...
+->a drawing book?
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede:.....
+->I help you to pick up
+    <<vn_show_sprite "Kaede" "smile">>
+    Kaede:...Thank you.
+
+
+===
