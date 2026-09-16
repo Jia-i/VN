@@ -1,11 +1,129 @@
 ﻿title: NewYarnScript
 ---
 <<show_date_cutscene "Day1">>
-<<vn_set_background "classroom day">>
+<<play_sfx "phone_ring">>
+<<play_bgm "daily1">>
+<<vn_set_background "playerRoom">>
+Hiragi: ......
+Hiragi: (A shrill ring drags my mind up from somewhere deep and dark.)
+Hiragi: (My eyelids refuse to open.)
+Hiragi: (--just five more minutes.)
+Hiragi: (.....)
+: (Brrring--brrring--)
+Hiragi: (The sound won't let up, and I finally crack my eyes open.)
+Hiragi: "Who is it... bothering someone this early... so rude."
+Hiragi: (Still comfortably curled up, I fumble for the phone on the nightstand.)
+Hiragi: "Mm..."
+Hiragi: (I finally get a grip on it — everything's still blurry, I just want to sleep... wait, is the phone...)
+<<stop_sfx>>
+<<play_sfx "drop">>
+: (--thud!)  
+Hiragi: "Ow?!"
+Hiragi: (The phone landed square on my forehead...)
+Hiragi: (What is going on... Woken up by some random call, and now beaned by my own phone. What kind of morning is this.)
+Hiragi: (Full of questions, I unlock my phone.)
+Hiragi: "--Inori?"
+Hiragi: (Seeing that painfully familiar name, I can't help but frown.)
+Hiragi: (I skim the messages — "you're going to be late if you don't get up"...?)
+Hiragi: "--!"
+Hiragi: (It hits me what day it is, and suddenly my head clears right up.)
+Hiragi: "What time is it?!"
+Hiragi: (8 o'clock...!)
+Hiragi: (I launch myself out of bed and sprint into the bathroom.)
+Hiragi: (Staring at my rat's-nest hair, I claw at it in a panic.)
+Hiragi: "I'm not going to make it...! It's only the fourth day of the new term...!"
+<<play_sfx "openDoor">>
+Hiragi: (I throw my hair and uniform into some kind of order and bolt out the door.) 
+<<vn_set_background "road">>
+<<play_sfx "running">>
+Hiragi: (Being late before the first week's even up would be too pathetic...!)
+Hiragi: (Thank god Inori kept calling... hm?)
+<<stop_sfx>>
+Hiragi: (Who's that over there...?)
+<<stop_sfx>>
 <<vn_show_sprite "Kaede" "normal">>
-Kaede: Good morning.
-Kaede: .......
+Hiragi: (A girl is crouched at the mouth of the alley, a handful of cats scattered around her.)
+Hiragi: (She doesn't seem the least bit bothered by the cats crowding her — her expression hasn't shifted once.)
+Hiragi: (Perfectly calm, unreadable the whole time.)
+<<vn_hide_sprite>>
+Hiragi: (She's really popular with them... I didn't think the cats around here were that friendly to people... wait, no! I'm going to be late!)
+Hiragi: (And she's wearing the same uniform as me... could she be a lost first-year?!)
+Hiragi: (I can't just walk past...!)
+Hiragi: (I turn and take a step toward her.)
+Hiragi: "Um... are you lost, by any chance?"
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: "......"
+Hiragi: (At my question, her hand pauses mid-pet, but she goes right back to fussing over the cat like nothing happened.)
+Hiragi: (Didn't she hear me? Or is she just shy...?)
+Hiragi: "If you're lost, we could walk to school together — we go to the same one, after all."
+Hiragi: (My somewhat frantic words land on deaf ears; she doesn't budge.)
+Hiragi: (No matter how I try to talk to her, she shows no sign of acknowledging me.)
+Hiragi: (Well, that's that... if this keeps up I'm really going to be late, so I have to go.)
+Hiragi: "I'm about to be late... I'll head off first if that's okay!"
+Hiragi: (Without waiting for a reply, I take off running.)
+<<vn_hide_sprite>>
+<<play_sfx "running">>
+
+
+<<vn_set_background "classroom day">>
+<<stop_sfx>>
+Hiragi: (Made it!)
+<<play_sfx "schoolBell">>
+: Ding-dong-- 
+Hiragi: (I reach my seat a split second before the bell finishes ringing.)
+Hiragi: (I made it--!)
+<<stop_sfx>>
+Hiragi: (I drop my bag on the desk and collapse into my chair with everything I've got left.)
+Hiragi: "So tired..."
+Hiragi: (I let out a breath, trying to catch it.)
+Hiragi: (The person in front of me turns around, a grin tugging at his mouth.)
+<<vn_show_sprite "Inori" "bigsmile">>
+<<play_voice "Inori_konnichiwa">>
+Inori: "Morning, Hiragi. Good thing you made it."
+Hiragi: "Oh... Inori! Morning!"
+<<vn_show_sprite "Inori" "normal">>
+Inori: "I was going to wait and walk with you, but after a while you still weren't up and about, so I figured you'd overslept."
+Inori: "I sent a few messages, and when you still didn't respond, I just went on ahead."
+Hiragi: "You really do know me best...! I completely forgot school had started again — I was still half asleep! Thank god you called, or I'd have missed the day entirely! You're my lifesaver."
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "The lifesaver who left you behind, you mean."
+Hiragi: (Inori's smile is warm, laced with just a bit of teasing.)
+Hiragi: (He's my childhood friend — we grew up together since elementary school.)
+Hiragi: (We weren't nearly this close back then, but somewhere along the way, we just... got close. Really close.)
+Hiragi: (Speaking of Inori, he's exactly the kind of kid parents brag about to their own — the "other people's child.")
+Hiragi: (Gentle, dependable, top grades... honestly, the guy doesn't seem to have a single flaw.)
+Hiragi: (No wonder he's held onto a spot in the top ten of last year's "Most Wanted to Date" ranking without fail.)
+Hiragi: (Even the kitchen is basically his second home... my mom's always going "Look at Inori, then look at you," like she's ready to just adopt him on the spot.)
+Hiragi: (Which makes me want to ask — Mom, do you really think that little of your own kid?)
+<<vn_hide_sprite>>
+Hiragi: (And yet, someone this perfect turned out to be the childhood friend who grew up right beside me! Honestly, I still don't fully get how our friendship has lasted this long — we don't even have that much in common.)
+Hiragi: (Anyway...)
+: (Growl--) 
+Hiragi: (Guess sprinting here full-speed left me starving...)
+Hiragi: (Class only just started, lunch is still a long way off... no choice but to tough it out for now.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "...Hiragi? Why are you spacing out?"
+Hiragi: (Inori looks at me, a little worried, and it snaps me back to reality.)
+Hiragi: "It's nothing! Just — running here at full speed wasn't exactly kind to my stomach this early in the morning."
+Hiragi: (Sprinting on an empty stomach really was too much to ask of it.)
+Inori: "It'd be bad if you got a stomachache."
+Hiragi: (With that, he pulls a bag of bread out of his bag and hands it to you.)
+<<vn_show_sprite "Inori" "bigsmile">>
+Hiragi: "Figured running all that way would burn through your energy, so I picked some up beforehand. Good thing I did, huh."
+Hiragi: "Oh! That's — the red bean filled bun from Minamino Bakery! Fresh every morning, only thirty made a day!"
+Hiragi: "I've wanted to try this for ages... Inori really does know me best! I don't even have to say it out loud and he already gets it!"
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Yeah. Figured you'd love it. Glad I got it right."
+Hiragi: (Inori really is dependable and gentle. Like he can read my mind. We know each other so well that half the things between us never even need saying, because the other just gets it.)
+Hiragi: (He really is too sweet... if only there were a hundred of him.)
+Hiragi: (I open the bun, determined to get at least a few bites in before the teacher walks in.)
+<<vn_hide_sprite>>
+
+
+
+
 <<vn_show_sprite "Kaede" "confused">>
+<<play_voice "Kaede_confused">>
 Kaede: Why you still standing at here?
 ->I'm just thinking something
     <<vn_show_sprite "Kaede" "normal">>
@@ -14,8 +132,10 @@ Kaede: Why you still standing at here?
     Kaede:...?
 
 <<vn_set_background "corridor day">>
+<<play_sfx "running">>
 Hiragi: Watch out!
 <<vn_show_sprite "Kaede" "normal">>
+<<stop_sfx>>
 Kaede: ...!
 
 <<vn_hide_sprite>>
@@ -31,6 +151,7 @@ Hiragi: By the way, this is...
     Kaede:.....
 ->I help you to pick up
     <<vn_show_sprite "Kaede" "smile">>
+    <<play_voice "Kaede_arigato">>
     Kaede:...Thank you.
 
 <<jump SecondDay>>
@@ -38,7 +159,7 @@ Hiragi: By the way, this is...
 
 title: SecondDay
 ---
-
+<<play_bgm "daily2">>
 <<vn_set_background "classroom day">>
 <<vn_show_sprite "Kaede" "normal">>
 Kaede: Good morning.

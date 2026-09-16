@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Threading.Tasks;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Yarn.Unity;
@@ -57,6 +58,14 @@ public class SFXData
 {
     public string sfxName;   
     public AudioClip clip;
+    [Range(0f, 1f)] public float volume = 1f;
+}
+
+[System.Serializable]
+public class VoiceData
+{
+    public string voiceId;  
+    public AudioClip clip;
 }
 
 public class VNController : MonoBehaviour
@@ -76,9 +85,12 @@ public class VNController : MonoBehaviour
 
     public List<BGMData> bgmTracks;
     public List<SFXData> sfxClips;
+    public List<VoiceData> voiceLines;
+    
 
     public AudioSource bgmSource;
     public AudioSource sfxSource; 
+     public AudioSource voiceSource;
 
 
     public float screenWidth = 1920f;
@@ -93,67 +105,60 @@ public class VNController : MonoBehaviour
    
 
     [YarnCommand("show_date_cutscene")]
-    public static async Task ShowDateCutscene(string cutsceneName, float wipeDuration = 0.5f, float holdSeconds = 2.1f)
+    public static IEnumerator ShowDateCutscene(string cutsceneName, float wipeDuration = 0.5f, float holdSeconds = 1.5f)
+{
+    var data = Instance.dateCutscenes.Find(c => c.cutsceneName == cutsceneName);
+    if (data == null)
     {
-        var data = Instance.dateCutscenes.Find(c => c.cutsceneName == cutsceneName);
-        if (data == null)
-        {
-            Debug.LogWarning($"No date cutscene named '{cutsceneName}' found");
-            return;
-        }
-
-        var panel = Instance.dateWipePanel;
-        var textGroup = Instance.dateTextGroup;
-
-        Instance.dateText.text = data.dateLabel;
-        textGroup.alpha = 0f;
-
-       
-        for (float t = 0; t < wipeDuration; t += Time.deltaTime)
-        {
-            panel.sizeDelta = new Vector2(Instance.screenWidth * EaseOutCubic(t / wipeDuration), panel.sizeDelta.y);
-            await Task.Yield();
-        }
-        panel.sizeDelta = new Vector2(Instance.screenWidth, panel.sizeDelta.y);
-
-        
-        Instance.background.sprite = data.background;
-        Instance.characterSlot.enabled = false; 
-
-        
-
-        for (float t = 0; t < 0.3f; t += Time.deltaTime)
-        {
-            textGroup.alpha = EaseOutCubic(t / 0.3f);
-            await Task.Yield();
-
-           /* panel.sizeDelta = new Vector2(targetWidth * EaseOutCubic(t / wipeDuration), panel.sizeDelta.y);
-            await Task.Yield();*/
-        }
-        
-
-        textGroup.alpha = 1f;
-        
-
-        await Task.Delay((int)(holdSeconds * 1000));
-
-        
-        for (float t = 0; t < 0.3f; t += Time.deltaTime)
-        {
-            textGroup.alpha = 1f - EaseInCubic(t / 0.3f);
-            await Task.Yield();
-        }
-        textGroup.alpha = 0f;
-
-       
-        for (float t = 0; t < wipeDuration; t += Time.deltaTime)
-        {
-            panel.sizeDelta = new Vector2(Instance.screenWidth * (1f - EaseInCubic(t / wipeDuration)), panel.sizeDelta.y);
-            await Task.Yield();
-        }
-        panel.sizeDelta = new Vector2(0f, panel.sizeDelta.y);
+        Debug.LogWarning($"No date cutscene named '{cutsceneName}' found");
+        yield break;
     }
 
+    var panel = Instance.dateWipePanel;
+    var textGroup = Instance.dateTextGroup;
+
+    Instance.dateText.text = data.dateLabel;
+    textGroup.alpha = 0f;
+
+ 
+    for (float t = 0; t < wipeDuration; t += Time.deltaTime)
+    {
+        panel.sizeDelta = new Vector2(Instance.screenWidth * EaseOutCubic(t / wipeDuration), panel.sizeDelta.y);
+        yield return null;
+    }
+    panel.sizeDelta = new Vector2(Instance.screenWidth, panel.sizeDelta.y);
+
+  
+    Instance.background.sprite = data.background;
+    Instance.characterSlot.enabled = false;
+
+
+    for (float t = 0; t < 0.3f; t += Time.deltaTime)
+    {
+        textGroup.alpha = EaseOutCubic(t / 0.3f);
+        yield return null;
+    }
+    textGroup.alpha = 1f;
+
+ 
+    yield return new WaitForSeconds(holdSeconds);
+
+    
+    for (float t = 0; t < 0.3f; t += Time.deltaTime)
+    {
+        textGroup.alpha = 1f - EaseInCubic(t / 0.3f);
+        yield return null;
+    }
+    textGroup.alpha = 0f;
+
+   
+    for (float t = 0; t < wipeDuration; t += Time.deltaTime)
+    {
+        panel.sizeDelta = new Vector2(Instance.screenWidth * (1f - EaseInCubic(t / wipeDuration)), panel.sizeDelta.y);
+        yield return null;
+    }
+    panel.sizeDelta = new Vector2(0f, panel.sizeDelta.y);
+}
 
 
     [YarnCommand("vn_show_sprite")]
@@ -230,16 +235,37 @@ public static async Task PlayBGM(string bgmName, float fadeSeconds = 1f, bool lo
     }
 
     [YarnCommand("play_sfx")]
-    public static void PlaySFX(string sfxName)
+public static void PlaySFX(string sfxName)
+{
+    var data = Instance.sfxClips.Find(s => s.sfxName == sfxName);
+    if (data == null)
     {
-        var data = Instance.sfxClips.Find(s => s.sfxName == sfxName);
+        Debug.LogWarning($"No SFX named '{sfxName}' found");
+        return;
+    }
+
+    Instance.sfxSource.PlayOneShot(data.clip, data.volume);
+}
+
+    [YarnCommand("stop_sfx")]
+public static void StopSFX()
+{
+    Instance.sfxSource.Stop();
+}
+
+    [YarnCommand("play_voice")]
+        public static void PlayVoice(string voiceId)
+    {
+        var data = Instance.voiceLines.Find(v => v.voiceId == voiceId);
         if (data == null)
         {
-            Debug.LogWarning($"No SFX named '{sfxName}' found");
+            Debug.LogWarning($"No voice clip named '{voiceId}' found");
             return;
         }
 
-        Instance.sfxSource.PlayOneShot(data.clip);
+        Instance.voiceSource.Stop();
+        Instance.voiceSource.clip = data.clip;
+        Instance.voiceSource.Play();
     }
 
 }
