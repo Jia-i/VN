@@ -1,9 +1,13 @@
 ﻿title: NewYarnScript
 ---
+<<declare $kaede_affection = 0>>
+<<declare $inori_affection = 0>>
+<<set $read_notebook to false>>
+
 <<show_date_cutscene "Day1">>
-<<play_sfx "phone_ring">>
 <<play_bgm "daily1">>
 <<vn_set_background "playerRoom">>
+<<play_sfx "phone_ring">>
 Hiragi: ......
 Hiragi: (A shrill ring drags my mind up from somewhere deep and dark.)
 Hiragi: (My eyelids refuse to open.)
@@ -107,7 +111,7 @@ Hiragi: (Inori looks at me, a little worried, and it snaps me back to reality.)
 Hiragi: "It's nothing! Just — running here at full speed wasn't exactly kind to my stomach this early in the morning."
 Hiragi: (Sprinting on an empty stomach really was too much to ask of it.)
 Inori: "It'd be bad if you got a stomachache."
-Hiragi: (With that, he pulls a bag of bread out of his bag and hands it to you.)
+Hiragi: (With that, he pulls a bag of bread out of his bag and hands it to me.)
 <<vn_show_sprite "Inori" "bigsmile">>
 Hiragi: "Figured running all that way would burn through your energy, so I picked some up beforehand. Good thing I did, huh."
 Hiragi: "Oh! That's — the red bean filled bun from Minamino Bakery! Fresh every morning, only thirty made a day!"
@@ -120,77 +124,1485 @@ Hiragi: (I open the bun, determined to get at least a few bites in before the te
 <<vn_hide_sprite>>
 
 
+Teacher: "All right, all right, settle down, it's time for class."
+Hiragi: (The teacher walks in, and the once-noisy classroom quiets down.)
+Hiragi: (There seems to be someone trailing behind the teacher — someone who wasn't in this class before... huh?)
+Hiragi: (Isn't that... the girl from earlier?!)
+Teacher: "This is our new transfer student. I expect you all to get along with her. Go ahead and introduce yourself."
+<<vn_show_sprite "Kaede" "normal">>
+<<play_voice "Kaede_konnichiwa">>
+The unfamiliar girl: "I'm Kishizawa Kaede. Nice to meet you."
+Hiragi: (She gives a small nod, her expression as unreadable as ever, calm and giving nothing away.)
+Hiragi: (So she really is the transfer student... and she's in my class, too.)
+<<vn_hide_sprite>>
+Teacher: "All right, Kishizawa, take the seat over there. Let's begin class!"
+Hiragi: (She walks over to the seat by the window and settles in slowly.)
+Hiragi: (Even though this morning's still on my mind... I should focus on the lesson for now.)
 
 
+<<play_sfx "schoolBell">>
+Hiragi: (Class is finally over...!)
+Hiragi: (I stretch, and right on cue my stomach growls.)
+: Growl--
+<<stop_sfx>>
+Hiragi: (Guess I really did overdo it running this morning... I'm hungrier than usual.)
+Hiragi: (Right then, Inori stands up from his seat and waves me over.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Want to grab something to eat at the store? I could use a snack too."
+Hiragi: "Sure, let's go."
+<<vn_hide_sprite>>
+<<vn_set_background "corridor day">>
+Hiragi: (We head out of the classroom together, toward the convenience store.)
+Hiragi: (As we walk, Inori suddenly turns back to look at me.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "So, what were you even doing last night? You almost missed the bell today — that's rare for you."
+-> Got way too into a game...
+-> Wanted to soak in the night air...
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Ha — you always say the most random things, Hiragi."
+<<vn_hide_sprite>>
+
+<<vn_set_background "stairs day">>
+Hiragi: (Walking alongside Inori, chatting, we head toward the convenience store.)
+Hiragi: "So... what should we get for break? Anything you're in the mood for?"
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Nothing in particular — I'll go with whatever you want."
+Hiragi: (We're still debating when we round the hallway corner.)
+Hiragi: "So then..."
+Hiragi: (The next second, before I can even react, I slam straight into someone coming the other way.)
+<<vn_hide_sprite>>
+<<play_sfx "drop">>
+: thud!
+<<play_voice "Kaede_confused">>
+? : !
+<<stop_sfx>>
+Hiragi: "Ow...!"
+Hiragi: (Everything in the other person's arms clatters to the floor.)
+Hiragi: "Oh — I'm sorry! I wasn't looking. Are you okay?"
+<<vn_show_sprite "Kaede" "confused">>
+Hiragi: (I look up to apologize properly, and realize it's the transfer student from this morning.)
+Hiragi: "Huh, it's you...!"
+Hiragi: (Kaede says nothing, just looks down at the mess scattered across the floor.)
+<<vn_hide_sprite>>
+Hiragi: (Inori and I crouch down to help gather everything up.)
+Hiragi: (An orientation booklet, some textbooks, and...)
+Hiragi: (A notebook, its edges worn soft with use, lying face-down on the floor.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Is this... a sketchbook?"
+Hiragi: (I pick it up, and just as I'm about to hand it back to Kaede, I can't help sneaking a glance.)
+<<vn_hide_sprite>>
+->Ask about it
+    Hiragi: "Do you draw?"
+    <<vn_show_sprite "Kaede" "normal">>
+    : (Kaede's hand pauses for a beat. I wait for an answer.)
+    : (But she just takes the sketchbook back without a word and walks off.)
+    <<play_sfx "walk">>
+    <<vn_hide_sprite>>
+    <<stop_sfx>>
+->Don't ask, just hand it back
+    Hiragi: (Though curious, I decide not to ask and just hand everything back to her.)
+    Hiragi: "Here's everything — sorry again for bumping into you."
+    <<vn_show_sprite "Kaede" "smile">>
+    Hiragi: (Kaede takes it, glances at me, gives a small nod, and walks off without a word.)
+    <<set $kaede_affection += 1>>
+    <<play_sfx "walk">>
+    <<vn_hide_sprite>>
+    <<stop_sfx>>
+
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Seems like a pretty quiet one, huh."
+Hiragi: "Yeah... I hope I didn't scare her or something."
+Inori: "I doubt it's about you, Hiiragi — she's probably just introverted. Don't worry about it too much."
+Hiragi: (His words settle me a bit, and we head on toward the store.)
+<<play_sfx "walk">>
+ <<vn_hide_sprite>>
+<<stop_sfx>>
+
+<<vn_set_background "street">>
+Hiragi: (After school, Inori suggests trying out a newly opened restaurant.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "I heard there's a new place near here — want to check out their menu?"
+Hiragi: "Sure, I could use a little treat right about now."
+<<vn_hide_sprite>>
+<<vn_set_background "cafeinner">>
+Hiragi: (We walk in side by side, and a server greets us with a smile.)
+Server: "Table for two? We've actually got a couples' set on special right now — would you like to hear about it?"
+<<vn_show_sprite "Inori" "normal">>
+Hiragi: (I blink, then glance over at Inori.)
+<<vn_hide_sprite>>
+->Play along
+    Hiragi: "Uh... yeah, we're together. What's in the couples' set?"
+    <<vn_show_sprite "Inori" "normal">>
+    Hiragi: (Inori looks briefly startled, but quickly goes along with it, smiling.)
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "That's right — go ahead and tell us about it."
+    <<set $inori_affection += 1>>
+    <<vn_hide_sprite>>
+    (The server happily walks us through the set, and we end up ordering along with the flow of it.)
+->Deny it
+    Hiragi: "Oh, no — we're just close friends. Could you recommend something else instead?"
+    <<vn_show_sprite "Inori" "normal">>
+    Inori: "......"
+    (Inori looks at me for a beat, but quickly smiles that gentle smile of his again.)
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "That's right, just good friends."
+    (The server looks a little embarrassed and quickly switches to recommending something else.)
+    <<vn_hide_sprite>>
+
+Hiragi: (Whatever we ended up ordering, we talked plenty over the meal and spent a genuinely nice evening together after school.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Honestly, the new dish was surprisingly good."
+Hiragi: "Yeah, we should come back sometime."
+Hiragi: (We share a smile and wrap up dinner.)
+<<vn_hide_sprite>>
+
+<<vn_set_background "playerRoomN">>
+Hiragi: (After getting ready for bed, I lie there, unable to quiet my thoughts.)
+Hiragi: (For some reason, the image of the transfer student crouched by the alley, watching that cat, keeps surfacing in my mind.)
+Hiragi: (Along with that worn, dog-eared sketchbook of hers...)
+Hiragi: (I wonder what she draws.)
+Hiragi: (And then...)
+Hiragi: (I think about the look on Inori's face right after the server said what she said — like there was something he almost said, but didn't.)
+Hiragi: "Am I overthinking it...?"
+Hiragi: (I go back and forth, but come up with nothing. I let out a sigh.)
+Hiragi: (Fine, if I keep at this I won't fall asleep, and I can't afford to be late again tomorrow.)
+Hiragi: (I roll over, close my eyes, and slowly drift off.)
+
+
+
+<<jump Day2>>
+===
+
+title: Day2
+---
+<<show_date_cutscene "Day2">>
+<<play_bgm "daily3">>
+<<vn_set_background "playerRoom">>
+Hiragi: (Determined not to be late again, I'm up before even the third alarm I set goes off.)
+Hiragi: (After washing up, I check myself in the mirror.)
+Hiragi: "Yeah, looking good — time to head out."
+<<play_sfx "phonevibrate">>
+: (Ding--)
+Hiragi: (My phone buzzes. It's a message from Inori.)
+<<stop_sfx>>
+Inori: < Figured you'd be up by now. I'm waiting outside! ^^ >
+Hiragi: (Reading it, I can't help but smile a little.)
+Hiragi: "This guy, always so thoughtful."
+Hiragi: (I grab my bag and head out the door.)
+<<vn_set_background "housePlayer">>
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Morning, Hiragi. Right on time today."
+Hiragi: "Of course — I'm not looking to repeat yesterday's disaster."
+Hiragi: (We walk side by side down the familiar route to school, chatting on and off.)
+<<vn_hide_sprite>>
+Hiragi: (When we reach the mouth of that alley, I unconsciously slow my steps and peer inside.)
+Hiragi: (Empty — nothing there but a few lazy cats.)
+Hiragi: (Today... the transfer student isn't here.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Something wrong?"
+Hiragi: (Noticing me stop, Inori follows my gaze.)
+Hiragi: "Oh, it's nothing."
+<<vn_hide_sprite>>
+Hiragi: (I brush it off and pick up my pace again.)
+Hiragi: (So she's not there every day, huh...)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "......"
+<<vn_hide_sprite>>
+
+<<vn_set_background "classroom day">>
+Hiragi: (The bell rings for break, and I notice Kaede's already gotten up and slipped quietly out of the room.)
+Hiragi: (Before I can think much about it, two familiar bento boxes suddenly appear in front of me.)
+Hiragi: (Boxes I've known by heart since middle school.)
+Hiragi: "Don't tell me this is—!"
+<<vn_show_sprite "Inori" "bigsmile">>
+Hiragi: (Inori nods, smiling.)
+Inori: "Found an interesting recipe online recently — wanted your opinion on it, so I made some today too."
+Hiragi: "Thanks... sorry to keep putting you through the trouble."
+Hiragi: (I take the box, thanking him, but my mind wanders.)
+Hiragi: (This childhood friend of mine has loved cooking since he was little — the second he spots some interesting recipe online, he gets excited to try it out.)
+Hiragi: (I still remember back in middle school, he "kidnapped" me into being his official taste-tester, always earnestly asking for my thoughts and how he could improve.)
+Hiragi: (And somewhere along the way, he started "accidentally" making too much, or making a point of cooking whatever I liked.)
+Hiragi: (He really is dependable...)
+Hiragi: "Inori's going to make someone a really dependable partner someday..."
+Hiragi: (The moment it's out of my mouth, I realize I actually said that out loud.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Hm... partner?"
+Hiragi: (He looks at me, a little confused.)
+Hiragi: "Huh? Did that slip out?"
+Hiragi: (I scramble to cover.)
+Hiragi: "I mean — yeah, Inori's just really dependable."
+Hiragi: "Not just kind, but you looks after people, and you can cook... honestly, that's basically boyfriend material, right?"
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "You're rating me way too highly — most people could pick this stuff up with a little practice."
+Hiragi: "Not everyone can get this good at it! Wasn't there that 'most wanted to date' ranking last year? You placed top five!"
+Hiragi: (I tease him.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Don't laugh at me, Hiragi."
+Hiragi: "Seriously, why haven't you found anyone?"
+Hiragi: "Honestly, I can't even picture you dating someone."
+Hiragi: "What's your type, anyway?"
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Hmm... you'll find out eventually."
+<<vn_show_sprite "Inori" "normal">>
+Hiragi: "Come to think of it — have you ever had a first love?"
+<<vn_show_sprite "Inori" "bigsmile">>
+Hiragi: (I ask offhand. Inori just smiles.)
+Inori: "What do you think?"
+Hiragi: "Every time you say it like that, it means you've already decided not to tell me!"
+Hiragi: (Right as I start to press further, the class bell rings.)
+Hiragi: "Ugh, you got lucky."
+Hiragi: (We drop the topic and settle back into our seats.)
+<<vn_hide_sprite>>
+
+
+<<vn_set_background "corridor afternoon">>
+Hiragi: (After school, I've been assigned cleaning duty, so I tell Inori to head home without me.)
+Hiragi: (Once the classroom's tidy, I step out of the staff room.)
+Hiragi: "Thanks, sir — I'll head off now."
+Hiragi: (Walking toward the gate, something occurs to me.)
+Hiragi: (Knowing Inori, he's probably not headed straight home — more likely he's parked himself in the library.)
+Hiragi: "Might as well go check there first."
+<<vn_set_background "artroom afternoon">>
+Hiragi: (Passing by the art room, I catch a glimpse of Kaede still inside, still drawing.)
+<<vn_show_sprite "Kaede" "smile">>
+Hiragi: (It's this late already — why is she still here...)
+<<vn_hide_sprite>>
+<<vn_set_background "corridor afternoon">>
+Hiragi: (But barging in on her doesn't feel right, so I keep walking, heading straight for the library.)
+<<vn_set_background "library afternoon">>
+Hiragi: (Sure enough, the moment I step inside, I spot Inori tucked in a corner, deep in a book.)
+Hiragi: (A mischievous idea pops into my head — I creep up behind him and poke his shoulder.)
+<<vn_show_sprite "Inori" "normal">>
+Hiragi: (But Inori barely reacts, just turns around to look at me.)
+Inori: "Oh, done with cleanup? Give me a second, I'll pack up."
+Hiragi: (With that he starts gathering his things.)
+Hiragi: "Seriously? How did you not even flinch?"
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori:  "No, Im startled."
+Hiragi: "There's no way that counts as startled."
+<<vn_hide_sprite>>
+Hiragi: (Bickering the whole way, we leave the library together.)
+<<vn_set_background "road">>
+Hiragi: (Walking home, something crosses my mind.)
+Hiragi: "There's this new movie that came out recently — it's kind of caught my interest."
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Oh yeah? What's it about?"
+Hiragi: "The story's apparently about the main character being liked by both their childhood friend and someone they met later, so they have to make a choice — but no matter which one they pick, it might end up hurting the other person... something like that."
+Hiragi: "That's what the synopsis said, anyway. I'm really curious what the main character ends up choosing, and what happens along the way."
+Inori: "That does sound pretty interesting."
+Hiragi: (Chatting away, we reach the fork in the road before we realize it.)
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Well — see you tomorrow."
+Hiragi: "Yep, see you!"
+Hiragi: (We wave goodbye and head off toward our own homes.)
+<<vn_hide_sprite>>
+
+<<jump Day3>>
+
+===
+
+title: Day3
+---
+<<show_date_cutscene "Day3">>
+<<play_bgm "daily3">>
+<<vn_set_background "classroom day">>
+Hiragi: (As usual, Inori and I walk to school together.)
+Hiragi: (The moment I sit down, Inori turns to face me.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Hey — are you free this Sunday?"
+Hiragi: "What's up?"
+Inori: "That movie you mentioned before — I entered a promo raffle yesterday and somehow ended up with a buy-one-get-one ticket."
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Want to go check it out together next Sunday?"
+Hiragi: (The mention of that movie instantly perks me up.)
+Hiragi: "Really? Yes, absolutely — I've been dying to know how it ends!"
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Then it's settled. We'll sort out the time and place later."
+<<vn_show_sprite "Inori" "bigsmile">>
+Hiragi: (We share a smile, happily locking in the plan.)
+<<vn_hide_sprite>>
+
+<<play_bgm "daily4">>
+<<play_sfx "schoolbell">>
+Hiragi: (The bell rings for break. I stretch and decide to head to the courtyard for some fresh air.)
+<<stop_sfx>>
+<<vn_set_background "courtyard day">>
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: (Walking in, I spot a familiar figure sitting on a bench, drawing.)
+Hiragi: "Oh, it's that transfer student from the other day."
+<<vn_hide_sprite>>
+Hiragi: (Just as I'm about to quietly approach, a gust of wind suddenly blows through.)
+: *fwip--*
+Hiragi: (It flips open the sketchbook resting on her lap, and I catch a glimpse without meaning to.)
+Hiragi: (Looks like she's sketching the big tree in the courtyard, along with two classmates chatting in the distance.)
+Hiragi: (The wind dies down, and right as it does, she looks up — our eyes meet head-on.)
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: "..."
+"..."
+Kaede: "..."
+"..."
+<<vn_show_sprite "Kaede" "confused">>
+Kaede: "You saw?"
+Hiragi: (I finally snap out of it.)
+Hiragi: "I just got here — I swear I wasn't trying to peek!"
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: "Is that so."
+<<vn_hide_sprite>>
+Hiragi: (With that, she looks back down and keeps drawing, no longer paying me any attention.)
+Hiragi: (Should I say something else...?)
+->Compliment her drawing
+    Hiragi: "So — Kishizawa, you're really good at drawing... is that a club thing?"
+    <<vn_show_sprite "Kaede" "normal">>
+    Hiragi: (Kaede stays silent for a beat.)
+    Hiragi: (Did I make her mad...?)
+    Hiragi: (Just as I'm starting to worry, she finally speaks.)
+    Kaede: "...It's a hobby."
+    <<vn_hide_sprite>>
+    Hiragi: (And then she falls silent again.)
+->Ask her to teach me drawing
+    Hiragi: "...Could you teach me to draw?"
+    <<vn_show_sprite "Kaede" "normal">>
+    Hiragi: (Kaede glances up at me.)
+    <<vn_show_sprite "Kaede" "confused">>
+    Kaede: "Have you drawn before?"
+    Hiragi: "No... but I suddenly felt like trying it?"
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede: "..."
+    Hiragi: (Kaede goes quiet again for a beat.)
+    Kaede: "Is that so."
+    <<vn_hide_sprite>>
+    Hiragi: (With that, she ignores me completely — seems like a no.)
+
+Kaede: "......"
+Hiragi: "......"
+Hiragi: (What do I do, this is so awkward! Should I say something!)
+Hiragi: (Just as I'm getting anxious, Kaede suddenly speaks.)
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: "...You're in the way."
+Hiragi: "What?"
+<<vn_show_sprite "Kaede" "confused">>
+Kaede: "...The light. You're blocking it."
+Hiragi: (That's when I realize I'm standing right next to the tree she's sketching, blocking the light.)
+Hiragi: "Oh — right, I'll get out of your way. I'll head off now!"
+<<vn_hide_sprite>>
+Hiragi: (I quickly step aside and take the chance to hurry out of the courtyard.)
+<<vn_set_background "corridor day">>
+Hiragi: (On the way back to class, I can't help thinking to myself—)
+Hiragi: "That transfer student sure has personality..."
+
+
+<<vn_set_background "playerRoomN">>
+Hiragi: (After getting ready for bed, I lie there, the transfer student from today drifting back into my mind.)
+Hiragi: (Is she alone like that every day? Could she actually be isolated...)
+Hiragi: (I also think about the way she draws, and can't help getting curious.)
+Hiragi: (When did she start drawing? How did she get so good at it...)
+Hiragi: (And she's got quite a personality too — she flat-out told me I was blocking her light today.)
+Hiragi: (Surprisingly blunt, huh?)
+Hiragi: (As I keep thinking, my eyelids grow heavier and heavier.)
+Hiragi: (Before I know it, I've drifted off to sleep.)
+
+<<jump Day4>>
+
+===
+
+
+title: Day4
+---
+<<show_date_cutscene "Day4">>
+<<play_bgm "daily1">>
+<<vn_set_background "classroom day">>
+Hiragi: (Another ordinary day rolls around. I yawn, dreading the fact that PE is on the schedule.)
+Hiragi: (I slump over my desk with a heavy sigh.)
+Hiragi: (Inori turns around from the seat in front.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Your gloom today is next level — it's reaching me all the way up here. You okay?"
+<<vn_hide_sprite>>
+Hiragi: "Rainy days are perfect for napping in class, and instead we have to trek all the way to the gym for PE. This is torture."
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Can't be helped — sitting in the classroom all day isn't great for you either."
+<<play_sfx "schoolbell">>
+Hiragi: (Right as he says it, the bell rings.)
+<<vn_hide_sprite>>
+Hiragi: "Ugh, fine, let's go."
+Hiragi: (We pack up and head toward the gym together.)
+<<stop_sfx>>
+
+
+<<vn_set_background "gym day">>
+Hiragi: (The PE teacher leads everyone through the warm-up.)
+PE Teacher: "Okay, everyone, focus up! Today's the standing long jump fitness test! These scores get recorded, so give it everything you've got!"
+Hiragi: (The boys in class immediately start groaning.)
+Boy: "Seriously, no basketball today...?"
+Hiragi: (Grumbling, everyone sits down to wait their turn.)
+<<vn_show_sprite "Inori" "normal">>
+Hiragi: (I'm zoning out to the right when it becomes Inori's turn.)
+Hiragi: (Watching his perfectly textbook form, I can't help but think—)
+Hiragi: (Is there anything this guy can't do...)
+<<vn_hide_sprite>>
+PE Teacher: "Nice form! Textbook, honestly!"
+Hiragi: (Taking in the praise, I shift my gaze to the left.)
+Hiragi: (It's just become Kaede's turn.)
+Hiragi: "Oh... is it Kaede's turn now?"
+Hiragi: (I rest my chin on my hand, watching with mild curiosity.)
+Hiragi: (But right as she lands, Kaede's whole body suddenly wobbles.)
+: *thud!*
+<<play_sfx "drop">>
 <<vn_show_sprite "Kaede" "confused">>
 <<play_voice "Kaede_confused">>
-Kaede: Why you still standing at here?
-->I'm just thinking something
-    <<vn_show_sprite "Kaede" "normal">>
-    Kaede:...ok
-->I'm watching you
-    Kaede:...?
+Kaede: "...!"
+Hiragi: (She crumples straight to the ground.)
+Hiragi: (A low gasp ripples through the students nearby, and I jump to my feet to see what's going on.)
+Hiragi: (The teacher hurries over and checks her ankle.)
+<<vn_hide_sprite>>
+PE Teacher: "Looks like a sprain... Someone needs to walk her to the infirmary."
+PE Teacher: "Volunteers! Take her to the infirmary!"
+Hiragi: (The teacher scans the group, but no one steps up. Everyone's suddenly very interested in looking anywhere but here.)
+Hiragi: (Makes sense, nobody really knows Kaede. No one wants to get pulled into it.)
+Hiragi: (...But that's hardly an excuse to just ignore someone who's hurt.)
+Hiragi: (Honestly, it's hard to just stand here watching, so I step forward.)
+Hiragi: "I'll take her, sir."
+PE Teacher: "You sure you'll manage on your own?"
+Hiragi: "It's fine, I've got it!"
+Hiragi: (After I reassure him a few more times, the teacher agrees.)
+Hiragi: (I help Kaede up, and we head off toward the infirmary together.)
 
-<<vn_set_background "corridor day">>
-<<play_sfx "running">>
-Hiragi: Watch out!
+
+<<vn_set_background "infirmary day">>
+<<play_sfx "openDoor">>
+Hiragi: (Walking into the infirmary, I explain the situation to the nurse on duty.)
+Hiragi: (The nurse has me help Kaede onto the bed, then brings out a small pillow to prop up her foot.)
+Hiragi: (She checks Kaede's ankle carefully.)
+Nurse: "No serious fracture, should be fine for now. I'll go grab an ice pack. Hiragi, stay here with Kishizawa until I get back."
+Hiragi: (With that, the nurse steps out.)
+Hiragi: (A silence settles over the room.)
+Hiragi: (I'm not sure what to say... comforting her doesn't quite feel right, either...)
+Hiragi: (Better to just stay quiet for now...)
+Hiragi: "...."
 <<vn_show_sprite "Kaede" "normal">>
+Hiragi: (After a while, Kaede suddenly speaks.)
+<<vn_show_sprite "Kaede" "confused">>
+Kaede: "...Why bother helping me?"
+Kaede: "You could've just pretended not to see, like everyone else. The teacher would've handled it either way."
+->"I can't just leave a friend hanging."
+->"If I'd pretended not to see, I'd have nightmares tonight."
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: (Kaede's expression stays blank as ever.)
+Kaede: "...Is that so."
+<<vn_hide_sprite>>
+Hiragi: (And then she goes quiet again.)
+Hiragi: (Just as I think she's done talking--)
+<<vn_show_sprite "Kaede" "bigsmile">>
+<<play_voice "Kaede_arigato">>
+Kaede: "...You're a strange one. Thanks."
+Hiragi: (Unexpectedly, she thanks me quite plainly.)
+Hiragi: (Not having expected any gratitude at all, I'm caught a little off guard.)
+<<vn_hide_sprite>>
+Hiragi: "It's nothing, really."
+Hiragi: (Right then, the nurse comes back in carrying an ice pack.)
+Nurse: "I'll take it from here — you head back to class."
+Hiragi: "Okay, thank you."
+Hiragi: (I turn to leave, but can't help glancing back at Kaede one more time before I go.)
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: (Her expression is as unreadable as ever, giving nothing away about what she's thinking, or whether her ankle even hurts.)
+Hiragi: (I hope she's all right... whether it's about the injury, or how everyone reacted.)
+<<vn_hide_sprite>>
+Hiragi: (With that thought, I leave the infirmary.)
+<<play_sfx "walkCorridor">>
 <<stop_sfx>>
-Kaede: ...!
 
+<<vn_set_background "classroom day">>
+Hiragi: (Back in the classroom, I make it through the rest of the school day.)
+Hiragi: (After school, Inori finally turns around.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Is Kishizawa okay? The PE teacher looked pretty worried."
+Hiragi: "She's fine — the nurse said it's not a serious fracture, should heal up fine as long as it's taken care of."
+Inori: "Oh, good."
+Hiragi: (He stands up and stretches.)
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "By the way, I've got club activities today, so I can't walk home with you."
+Hiragi: "Feels like it's been forever since I walked home alone."
+Inori: "Then you should join a club too — then we could walk home together."
 <<vn_hide_sprite>>
-Hiragi:Ouch....
-Hiragi: (I didn't see her just now...is she okay?)
+Hiragi: (I wave a hand.)
+Hiragi: "I'm firmly Team Go-Straight-Home. Club life isn't for me."
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Guess there's no helping you."
+Hiragi: (We share a smile and say goodbye.)
+<<vn_hide_sprite>>
+<<play_sfx "walkCorridor">>
+Hiragi: (And with that, I head home on my own.)
+<<stop_sfx>>
+
+
+<<jump Day5>>
+
+
+===
+
+title: Day5
+
+---
+<<show_date_cutscene "Day5">>
+<<play_bgm "daily3">>
+<<vn_set_background "classroom day">>
+<<play_sfx "schoolBell">>
+Hiragi: (The bell rings for break, and I'm the first one on my feet.)
+Hiragi: (What is with that teacher... three sentences in and there's still no point in sight, and yet if you tune out you get called on...!)
+Hiragi: (Let's go get some air on the roof, or I might actually lose it.)
+<<stop_sfx>>
+<<vn_set_background "rooftop">>
+Hiragi: (I head up the stairwell and push open the rooftop door.)
+Hiragi: (Standing by the railing, I let my mind wander for a while, staring off into the distance.)
+Hiragi: (...Guess I've had enough — time to head back.)
+Hiragi: (Though I really don't want to... what's next period again?)
+Hiragi: (Maybe I'll grab some bread from the store after... hm?)
 <<vn_show_sprite "Kaede" "normal">>
-Hiragi: Are you ok?
-Kaede:....
+Hiragi: (I turn around and see Kaede sitting in a chair, eating her lunch.)
+Hiragi: (That familiar sketchbook is set down casually beside her.)
 <<vn_hide_sprite>>
-Hiragi: By the way, this is...
-->a drawing book?
+Hiragi: (Why is Kaede up here...? Or wait, has she been here this whole time? I didn't even notice...!)
+Hiragi: (Staring isn't exactly polite — better say hello.)
+Hiragi: "Oh... Kishizawa, what a coincidence."
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: (She glances up at me, then goes right back to her lunch.)
+Hiragi: (Guess it's going to be the usual ignore-me routine, huh...)
+Hiragi: (I brush it off, figuring I should be used to it by now.)
+<<vn_show_sprite "Kaede" "smile">>
+Hiragi: (But this time, she gives a small nod in my direction.)
+Hiragi: (!)
+Hiragi: (She actually responded to me!)
+<<vn_hide_sprite>>
+Hiragi: (A small wave of happiness rushes through me. It feels like she's opened up to me, just a little.)
+Hiragi: (Maybe swept up in that feeling, I find myself speaking without thinking.)
+Hiragi: "Kishizawa, come find me if you ever need anything, okay!"
+<<play_sfx "running">>
+Hiragi: (With that, I head off the rooftop, my mood noticeably better than when I came up.)
+<<stop_sfx>>
+
+
+<<jump Day6>>
+
+
+===
+
+
+title: Day6
+
+---
+
+<<show_date_cutscene "Day6">>
+<<play_bgm "daily4">>
+<<vn_set_background "classroom day">>
+Hiragi: (In the morning, I walk into the classroom and open my desk drawer, only to find a letter tucked inside.)
+Hiragi: (It's a short note with a few simple lines of thanks and apology.)
+Hiragi: ("Thank you for taking me to the infirmary before. And sorry for ignoring you all this time...")
+Hiragi: (the infirmary...?)
+Hiragi: (Could this be from Kaede?)
+Hiragi: (Half in disbelief, I keep reading.)
+Hiragi: ("I've never been good at putting my thoughts into words. It's not that I mean to come across the way I do — I'm sorry if it made you uncomfortable.")
+Hiragi: (...Such a plain, honest apology.)
+Hiragi: (So this is what she was thinking... it's not that she didn't want to talk to people, she just didn't know how...?)
+Hiragi: (And here I thought she showed nothing on her face — turns out there's a lot going on underneath.)
+Hiragi: (I feel like... I understand Kaede a little better now.)
+Hiragi: (I carefully tuck the letter away, unable to stop the corner of my mouth from lifting.)
+
+<<vn_set_background "playerRoomN">>
+Hiragi: (Back home, I lie on my bed, thinking back on that letter from this morning.)
+Hiragi: (Kaede really does seem like someone who's better at expressing herself through writing and drawing.)
+Hiragi: (As I mull it over, an idea comes to me.)
+Hiragi: (Maybe I should write her a letter back.)
+Hiragi: (Besides wanting to know her better, I'm also curious when she started drawing in the first place.)
+Hiragi: (I roll off the bed, grab some paper and a pen, and start carefully thinking through what to write.)
+
+
+<<jump Day7>>
+
+
+===
+
+
+title:Day7
+
+
+---
+<<show_date_cutscene "Day7">>
+<<play_bgm "daily3">>
+<<vn_set_background "classroom day">>
+Hiragi: (I made a point of getting to school early and quietly slipped the letter I wrote into Kaede's desk drawer.)
+Hiragi: (Sitting back down at my own seat, I feel oddly nervous — probably because this is the first time I've written something like this.)
+Hiragi: (I'm really not used to doing this kind of thing... why do I feel so guilty about nothing?)
+Hiragi: (Just as I'm thinking that, a voice comes from behind me.)
+?: "Hiragi?"
+Hiragi: "!"
+Hiragi: (Startled, I whip around.)
+Hiragi: "Oh — it's just Inori."
+<<vn_show_sprite "Inori" "normal">>
+Inori: "It's rare for you to be at school this early — makes me curious what got you up so early today."
+Hiragi: "Oh, it's nothing, just... couldn't sleep, so I figured I'd head out early!"
+Hiragi: (Without answering right away, Inori's gaze lingers on me for a moment.)
+Inori: "......"
+<<vn_show_sprite "Inori" "bigsmile">>
+Hiragi: (But he quickly breaks into his usual smile.)
+Inori: "Is that right? Guess that happens sometimes."
+<<vn_show_sprite "Inori" "normal">>
+Hiragi: (With that, he turns and heads back to his own seat.)
+<<vn_hide_sprite>>
+Hiragi: (Looks like that worked...?)
+
+
+<<play_sfx "schoolBell">>
+<<vn_set_background "courtyard day">>
+Hiragi: (During break, unable to stop thinking about how Kaede might react, I head straight to the courtyard to check if she's there.)
+Hiragi: (Sure enough, she's sitting on that familiar bench.)
+<<stop_sfx>>
+Hiragi: (This time, though, she doesn't seem to be drawing — she's writing something instead, head bowed.)
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: (I step a little closer; she seems to notice and looks up at me.)
+Hiragi: "...Hi? Um..."
+Hiragi: (What do I even say...? Everything feels forced!)
+Hiragi: (Should I just ask about the letter directly? No, wait — did she even get it?)
+Hiragi: (If I bring it up out of nowhere, it might scare her off.)
+Hiragi: (Is there some other excuse I could use...!)
+Hiragi: (I can't come up with a reason to be here and scramble to figure out what to say.)
+<<vn_hide_sprite>>
+Hiragi: (But Kaede doesn't seem to mind at all — right in front of me, she folds the finished letter, folds it again, and tucks it into an envelope.)
+Hiragi: "Kishizawa, is that...?"
+Hiragi: (Kaede holds the letter out to me.)
+<<vn_show_sprite "Kaede" "normal">>
+<<play_voice "Kaede_ya">>
+Kaede: "Just finished it."
+Hiragi: "......"
+Hiragi: (No, you don't usually finish writing a letter and seal it right in front of the person it's addressed to...)
+Hiragi: Still, I accept it anyway.
+Hiragi: "Thanks... I'll make sure to read it properly."
+<<vn_show_sprite "Kaede" "smile">>
+Hiragi: (Kaede just gives a small nod, and doesn't say anything more.)
+<<vn_hide_sprite>>
+
+<<vn_set_background "hall afternoon">>
+Hiragi: (After school, Inori mentions he has a student council meeting, so he tells me to head home without him.)
+<<play_sfx "walk">>
+<<vn_set_background "alley">>
+Hiragi: (Walking through that familiar alley, I spot the same cats from before.)
+<<stop_sfx>>
+Hiragi: "Oh, it's those guys again...! Let's try petting them — they're so cute."
+<<play_sfx "cat angry">>
+Hiragi: (But they're all fiercely defensive, and I fail every single attempt.)
+<<stop_sfx>>
+Hiragi: (Am I really that unpopular...? Not fitting in at school is one thing, but even the cats aren't into me?)
+Hiragi: (Just as I'm starting to feel a little deflated, a voice suddenly sounds behind me.)
+<<play_voice "Kaede_ya">>
+?: "You need cat treats to win them over."
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: (I turn around and find Kaede standing there, holding a small bag.)
+Hiragi: (She walks straight past me, up to the cats, and opens a bag of cat treats.)
+<<play_sfx "cat cute">>
+Hiragi: (The cats immediately swarm over, eating happily, while Kaede pets them along the way.)
+<<stop_sfx>>
+Hiragi: (I try talking to Kaede again, but get no response.)
+Hiragi: (I think it over and shift the topic to cats instead.)
+Hiragi: "So, I wonder what kind of treats cats actually like?"
+Hiragi: (Maybe that's the kind of question that'll actually catch her interest?)
+<<vn_show_sprite "Kaede" "confused">>
+Kaede: "...Cat crack."
+Hiragi: (There it is — got her!)
+Hiragi: (We end up chatting on and off like that, mostly about cats.)
+Hiragi: "Kaede, you and these cats really get along well."
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: (Kaede doesn't respond, just hands me a small can of something.)
+Kaede: "...Freeze-dried. They like it better."
+<<play_sfx "walk">>
+<<vn_hide_sprite>>
+Hiragi: (With that, she turns and walks off, without waiting for a reply.)
+Hiragi: (I look at the freeze-dried treats in my hand, then at her retreating back, and can't help but laugh a little.)
+<<stop_sfx>>
+Hiragi: "Such an honest person, in her own weird way."
+
+
+<<jump Day8>>
+
+
+===
+
+
+title:Day8
+
+
+
+---
+
+<<show_date_cutscene "Day8">>
+<<play_bgm "daily1">>
+<<vn_set_background "playerRoom">>
+Hiragi: (The day I've been waiting for with Inori has finally arrived.)
+Hiragi: (Finally.. It's the day we go for that movie)
+<<play_sfx "openDoor">>
+Hiragi: (I'll head out half an hour early — just in case, so I don't end up keeping him waiting.)
+<<vn_set_background "station">>
+Hiragi: (When I arrive at the station, though, Inori's already there ahead of me.)
+Hiragi: "Sorry, did I keep you waiting?"
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "It's fine, I just got here too."
+Hiragi: (He smiles and waves me over.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Come on, the movie's about to start."
+<<vn_hide_sprite>>
+Hiragi: "Right, let's go!"
+Hiragi: (We walk side by side toward the theater, both of us looking forward to finally seeing that movie that's had us so curious.)
+Hiragi: (......)
+
+<<vn_set_background "road afternoon">>
+<<play_bgm "daily3">>
+Hiragi: (After the movie lets out, we walk back together, discussing the plot.)
+Hiragi: (The story was exactly about a childhood friend and someone who came along later, both falling for the protagonist at the same time.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "If it were you, who would you choose?"
+<<vn_hide_sprite>>
+Hiragi: (I think it over for a moment.)
+Hiragi: "Honestly, I don't think I could choose either. They're both amazing."
+Hiragi: "Feels like picking one would hurt the other, and I wouldn't want that."
+Hiragi: "This is such a headache. Though thankfully, this kind of thing will never happen to me."
+Hiragi: "What about you, Inori? Who would you choose?"
+<<vn_show_sprite "Inori" "normal">>
+Hiragi: (Inori thinks it over, then smiles.)
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Hmm... both of their feelings are precious, and worth being grateful for."
+Inori: "But I think I'd choose whoever's been waiting the longest."
+<<vn_show_sprite "Inori" "smile">>
+Inori: "They know you better than anyone, they understand you in every state you're in, and they're willing to wait for you no matter what... I feel like that side is just a bit more..."
+<<vn_show_sprite "Inori" "normal">>
+Hiragi: (He trails off, unusually at a loss for words, seeming to struggle with how to phrase it.)
+<<vn_hide_sprite>>
+Hiragi: "You're actually putting real thought into this... don't tell me you're secretly a hopeless romantic?"
+Hiragi: (I tease him.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "..."
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "You're the one who wanted a serious answer."
+<<vn_hide_sprite>>
+Hiragi: "Besides, this kind of situation is actually pretty common — it's kind of fun to think about."
+Hiragi: (Inori suddenly looks at me seriously again.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "If you really had to choose... which one would it be?"
+->The childhood friend
+    "The childhood friend, I think — the time spent together and how well they know you isn't something you can fake."
+->The person who showed up later
+    "The one who showed up later, maybe — that sense of newness and the flutter it brings might be the most honest feeling of all."
+
+
+Inori: "......"
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "...I see. That does sound like something you'd say, Hiragi."
+Hiragi: (An unreadable smile — he always wears that same expression whenever he doesn't want me to know what he's thinking.)
+Hiragi: (It bothers me a little... but asking outright doesn't feel right either.)
+<<vn_hide_sprite>>
+Hiragi: (Guess I'll try feeling him out about it some other time.)
+Hiragi: (We keep chatting, and before we know it, we've reached the fork in the road.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "Well — see you tomorrow."
+Hiragi: "Yep, see you!"
+<<vn_hide_sprite>>
+Hiragi: (We say our goodbyes and head off toward our own homes.)
+<<play_sfx "walk">>
+
+<<jump Day9>>
+
+===
+
+
+title: Day9
+
+
+---
+
+<<show_date_cutscene "Day9">>
+<<play_bgm "daily2">>
+<<vn_hide_sprite>>
+<<vn_set_background "classroom day">>
+<<play_sfx "schoolBell">>
+Hiragi: (Finally the class ended, and I open my desk drawer out of habit, only to find another letter sitting inside.)
+Hiragi: (“Meet me on the rooftop after school.” Short, and unmistakably Kaede's handwriting.)
+<<stop_sfx>>
+Hiragi: (A small smile creeps onto my face. Seems like we've gotten close enough that she'd ask to see me directly now, instead of just leaving a letter for me to read alone.)
+Hiragi: (I fold it carefully and tuck it into my bag.)
+Hiragi: (Getting up to stretch, I glance over toward Inori's seat — and something catches my eye on the floor beside it.)
+Hiragi: (A photo, face-down, half-slid under the desk.)
+Hiragi: (I bend down and pick it up. It must have fallen out of his bag without him noticing.)
+Hiragi: “If I don't say anything now, he might go the whole day without realizing it's gone…”
+Hiragi: (But then again — Kaede's waiting for me after school.)
+Hiragi: (I glance between the letter in my bag and the photo in my hand.)
+Hiragi: “…Guess I'll have to pick one.”
+->Go meet Kaede on the rooftop
+    <<play_bgm "daily3">>
+    <<vn_set_background "rooftop">>
+    Hiragi: (I head up to the rooftop, and sure enough, Kaede's already there, sitting on the bench, watching the sky.)
+    <<vn_show_sprite "Kaede" "confused">>
+    <<play_voice "Kaede_ya">>
+    Kaede: "...You're slow."
+    Hiragi: "Sorry, sorry — got held up. You're here early though."
     <<vn_show_sprite "Kaede" "normal">>
-    Kaede:.....
-->I help you to pick up
+    Kaede: "...Wanted to be."
+    <<vn_hide_sprite>>
+    Hiragi: (Short answer, but somehow it still catches me off guard a little.)
+    Hiragi: (I sit down next to her. Neither of us says anything for a bit, but it's not an awkward silence — more like the kind you don't feel the need to fill.)
+    <<vn_show_sprite "Kaede" "bigsmile">>
+    <<play_voice "Kaede_ureshi">>
+    Kaede: "...Thanks. For coming."
+    Hiragi: "Of course. You asked, didn't you?"
+    <<vn_show_sprite "Kaede" "smile">>
+    Hiragi: (She doesn't reply, just looks back out at the sky — but I catch the corner of her mouth easing, just slightly.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_Day1>>
+->Catch up with Inori to return the photo 
+    <<play_bgm "daily4">>
+    Hiragi: (I grab my bag and catch up to Inori just as he's about to leave the classroom.)
+    Hiragi: "Hey — you dropped this."
+    Hiragi: (I hold the photo out. Inori blinks, pats down his bag, and looks genuinely surprised to find it missing.)
+    <<vn_show_sprite "Inori" "smile">>
+    <<play_voice "Inori_arigato">>
+    Inori: "Oh — thanks. That would've been annoying to lose."
+    <<vn_show_sprite "Inori" "normal">>
+    Hiragi: (He tucks it away a little too fast, without explaining what it actually is.)
+    Hiragi: "What is it, anyway? You're being weirdly cagey about it."
+    <<vn_show_sprite "Inori" "bigsmile">>
+    <<play_voice "Inori_iie">>
+    Inori: "...Just an old photo. Nothing important."
+    <<vn_hide_sprite>>
+    Hiragi: (He says it easily enough, but changes the subject to my homework right after — a little too smoothly. I let it go.)
+    Hiragi: (We end up walking home together, same as always.)
+    <<jump Inori_Day1>>
+
+===
+
+
+title: Kaede_Day1
+
+---
+
+
+<<show_date_cutscene "Kaede_day1">>
+<<play_bgm "daily3">>
+<<vn_hide_sprite>>
+<<vn_set_background "courtyard day">>
+Hiragi: (Kaede gets up to grab a drink from the vending machine, leaving her sketchbook sitting right there on the bench.)
+Hiragi: (It's closed. Soft at the corners. Clearly gets opened a lot.)
+Hiragi: “…I wonder what's in this thing.”
+Hiragi: (I glance at the vending machine. Still picking a flavor. I've got time.)
+->Open it 
+    <<set $kaede_affection -= 1>>
+    Hiragi: (I flip it open, and — oh. There's a lot of me in here. More than once.)
+    <<vn_show_sprite "Kaede" "confused">>
+    <<play_voice"Kaede_confused">>
+    Kaede: “…What are you doing.”
+    Hiragi: (I did not hear her come back.)
+    Hiragi: “I— okay, this looks bad, but—”
+    <<vn_show_sprite "Kaede" "confused">>
+    Kaede: “…It is bad.”
+    <<vn_show_sprite "Kaede" "normal">>
+    Hiragi: (She takes it back and doesn't say another word the whole walk home.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_Day2>>
+->Don't open it 
+    <<set $kaede_affection += 1>>
+    Hiragi: (I put my hands in my pockets instead.)
+    Hiragi: (When Kaede gets back and sees it untouched, she actually pauses.)
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede: “…You didn't look?”
+    Hiragi: “Wasn't mine to look at.”
+    Hiragi: (She sits down, opens it herself, and turns it toward me — a sketch of the two of us on this exact bench.)
+    <<vn_show_sprite "Kaede" "smile">>
+    Kaede: “…Here. If you're curious.”
+    Hiragi: “You drew this from memory?”
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede: “…Mm.”
+    Hiragi: “That's a little terrifying, honestly. In a good way.”
+    <<vn_show_sprite "Kaede" "smile">>
+    Hiragi: (She almost smiles. Almost.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_Day2>>
+
+
+===
+
+
+title: Kaede_Day2
+
+---
+
+<<show_date_cutscene "Kaede_day2">>
+<<play_bgm "sad1">>
+<<vn_hide_sprite>>
+<<vn_set_background "rooftop">>
+
+Hiragi: (Kaede's on the rooftop again, but something's off... She's just sitting there, sketchbook closed beside her, untouched.)
+Hiragi: “…You okay?”
+<<vn_show_sprite "Kaede" "sad">>
+Kaede: "......"
+Hiragi: (No answer for a while. I sit down next to her anyway.)
+<<vn_hide_sprite>>
+Hiragi: “You don't have to tell me anything. I'll just sit here being decorative.”
+<<vn_show_sprite "Kaede" "sad">>
+Hiragi: (A small huff of breath.)
+<<vn_show_sprite "Kaede" "confused">>
+Kaede: “…My cat died. Yesterday.”
+Kaede: “…Had it since before we moved here.”
+Kaede: “…That's why. The cats. It's because of it.”
+Hiragi: (And then, no warning at all, she starts crying quietly.)
+<<vn_show_sprite "Kaede" "sad">>
+Hiragi: (“Okay. Okay. What do people do here.”)
+->Pull her into a hug 
+    <<set $kaede_affection -= 1>>
+    Hiragi: (I go for the hug. Bad call.)
+    <<vn_show_sprite "Kaede" "confused">>
+    <<play_voice "Kaede_confused">>
+    Hiragi: (She flinches back like I've electrocuted her.)
+    Kaede: “…Don't. Please don't do that.”
+    Hiragi: “Right. Sorry. Noted, permanently.”
+    <<vn_show_sprite "Kaede" "sad">>
+    Hiragi: (She keeps her distance the rest of the conversation.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_Day3>>
+->Hand her a tissue and sit quietly beside her 
+    <<set $kaede_affection += 2>>
+    Hiragi: (I just hold out a tissue and shut up, which — miracle of miracles — turns out to be the correct move.)
+    Hiragi: (She cries for a while. I stay put.)
     <<vn_show_sprite "Kaede" "smile">>
     <<play_voice "Kaede_arigato">>
-    Kaede:...Thank you.
+    Kaede: “…Thank you. For not making it a whole thing.”
+    Hiragi: “Didn't seem like the moment for a whole thing.”
+    Kaede: “…Not everyone would get that.”
+    Hiragi: “Well, lucky you, I'm apparently one of the good ones.”
+    Hiragi: (She wipes her face, and something in her shoulders relaxes that wasn't relaxed before.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_Day3>>
 
-<<jump SecondDay>>
+
 ===
 
-title: SecondDay
+title: Kaede_Day3
+
+
 ---
-<<play_bgm "daily2">>
-<<vn_set_background "classroom day">>
-<<vn_show_sprite "Kaede" "normal">>
-Kaede: Good morning.
-Kaede: .......
+
+<<show_date_cutscene "Kaede_day3">>
+<<play_bgm "daily4">>
+<<vn_hide_sprite>>
+<<vn_set_background "hall afternoon">>
+
+Hiragi: (The sky just opens up. I duck under the overhang along with half the school.)
 <<vn_show_sprite "Kaede" "confused">>
-Kaede: Why you still standing at here?
-->I'm just thinking something
-    <<vn_show_sprite "Kaede" "normal">>
-    Kaede:...ok
-->I'm watching you
-    Kaede:...?
-
-<<vn_set_background "corridor day">>
-Hiragi: Watch out!
+Hiragi: (Kaede's off to the side, glaring at the rain like it personally wronged her.)
+Hiragi: “Let me guess. No umbrella.”
 <<vn_show_sprite "Kaede" "normal">>
-Kaede: ...!
-
-<<vn_hide_sprite>>
-Hiragi:Ouch....
-Hiragi: (I didn't see her just now...is she okay?)
-<<vn_show_sprite "Kaede" "normal">>
-Hiragi: Are you ok?
-Kaede:....
-<<vn_hide_sprite>>
-Hiragi: By the way, this is...
-->a drawing book?
+Kaede: "......”
+->Walk past without saying anything
+    <<vn_hide_sprite>>
+    Hiragi: “Well. Good luck with that.”
+    Hiragi: (I open my own umbrella and head off, immediately regretting it the entire walk home.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_Day4>>
+->Offer to share my umbrella 
+    <<set $kaede_affection += 1>>
+    Hiragi: “Come on, we can share. I'm headed that way anyway.”
+    <<vn_show_sprite "Kaede" "confused">>
+    Hiragi: (She hesitates, then steps in close enough that our shoulders bump.)
+    <<vn_hide_sprite>>
+    <<vn_set_background "road afternoon">>
+    Hiragi: (The rain lets up about halfway. I fold the umbrella away — and that's when we spot a soaked, extremely offended-looking cat hiding in an alley.)
+    <<vn_show_sprite "Kaede" "sad">>
+    Kaede: “…Poor thing.”
+    <<vn_hide_sprite>>
+    Hiragi: (She's crouched down before I even finish the thought, coaxing it out with both hands.)
+    <<vn_show_sprite "Kaede" "bigsmile">>
+    Kaede: “Look. White paws. Like little socks.”
+    Hiragi: “You're unreasonably cute when you're excited about cats, you know that?”
     <<vn_show_sprite "Kaede" "normal">>
-    Kaede:.....
-->I help you to pick up
+    Hiragi: (She goes bright red and doesn't say a single word the rest of the walk — but she also doesn't let go of my sleeve.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_Day4>>
+
+===
+
+title: Kaede_Day4
+
+---
+
+<<show_date_cutscene "Kaede_day4">>
+<<play_bgm "daily3">>
+<<vn_hide_sprite>>
+<<vn_set_background "classroom day">>
+
+
+Classmate: “Okay but you two are basically dating, right? Just say it.”
+Hiragi: "What...?"
+Hiragi: (A whole crowd's gathered around my desk. Kaede's two seats over, very pointedly not looking up from her notebook, which is somehow louder than actually looking up.)
+->Play along
+    <<set $kaede_affection -= 3>>
+    Hiragi: “Ha, well, who knows.”
+    <<vn_show_sprite "Kaede" "normal">>
+    Hiragi: (Immediate chaos. When I look over, Kaede's already packing her bag, face blank, and slips out without a word.)
+    Hiragi: (She doesn't answer my letters for two days. Worth it? No. Absolutely not.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_EndingBranch>>
+->Deny it and shut it down
+    <<set $kaede_affection += 1>>
+    Hiragi: “We're just friends, don't read into it so hard.”
+    Hiragi: (The crowd deflates, disappointed, and wanders off in search of better gossip.)
+    <<vn_set_background "rooftop">>
+    Hiragi: (Later, on the rooftop, Kaede brings it up herself.)
+    <<vn_show_sprite "Kaede" "normal">>
+    <<play_voice "Kaede_ya">>
+    Kaede: “…Thanks. For earlier.”
+    Hiragi: “Figured you didn't want an audience.”
+    Kaede: “…I didn't.”
+    Hiragi: “Consider me your official crowd-control service, free of charge.”
     <<vn_show_sprite "Kaede" "smile">>
-    Kaede:...Thank you.
+    Hiragi: (That gets an actual, if tiny, smile.)
+    <<vn_hide_sprite>>
+    <<jump Kaede_EndingBranch>>
+
+===
+
+
+title: Kaede_EndingBranch
+
+
+---
+<<show_date_cutscene "Kaede_EB">>
+<<play_bgm "daily4">>
+<<vn_hide_sprite>>
+<<vn_set_background "courtyard day">>
+
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: (Autumn's coming in. Kaede's moved to the other side of the bench because the wind finally winning.)
+<<vn_show_sprite "Kaede" "smile">>
+Hiragi: (I watch her sketch for a while and think about everything since that first rooftop letter.)
+Hiragi: "......"
+<<vn_hide_sprite>>
+Hiragi: "......"
+Hiragi: (…Yeah. I like her. A lot, actually.)
+Hiragi: (So...)
+Hiragi: (It's the time to make decision.)
+->Confess <<if $kaede_affection > 4>>
+    Hiragi: "......"
+    Hiragi: (I close my mouth before anything stupid comes out. Not here. Not like this, with her mid-sketch and cicadas screaming in the background.)
+    Hiragi: "...Hey, Kaede."
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede: "...Mm?"
+    <<vn_hide_sprite>>
+    Hiragi: (She doesn't even look up from the sketchbook.)
+    Hiragi: "Nothing. Just — wanted to say your name, I guess."
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede: "...Weird."
+    Hiragi: "Yeah. A little."
+    <<vn_hide_sprite>>
+    Hiragi: (She goes back to sketching, unbothered. I, on the other hand, am already regretting agreeing to my own plan.)
+    Hiragi: (Tomorrow. I'll say it tomorrow. Today doesn't count — today's just for working up the nerve.)
+    <<jump Kaede_HE>>
+->Say nothing
+    Hiragi: (I open my mouth, then close it again.)
+    Hiragi: (What would I even say. "Hey, I've been thinking about you for months and I don't know how to stop"? Yeah. No.)
+    <<vn_show_sprite "Kaede" "normal">>
+    Kaede: "...You're being quiet."
+    Hiragi: "Just tired, I guess."
+    <<play_voice "Kaede_ok">>
+    Kaede: "...Okay."
+    <<vn_hide_sprite>>
+    Hiragi: (She doesn't push. She never does. That's kind of the problem, actually — she'd let me get away with saying nothing forever, if I let her.)
+    Hiragi: (The wind keep going. The moment passes, same as every other moment before it.)
+    <<jump Kaede_BE>>
 
 
 ===
+
+title: Kaede_HE
+
+---
+
+<<show_date_cutscene "Kaede_HE">>
+<<play_bgm "HE1">>
+<<vn_hide_sprite>>
+<<vn_set_background "rooftop afternoon">>
+
+Hiragi: (I find her on the usual bench, sketchbook open. I've had all night to rehearse this, and somehow I still don't feel ready.)
+Hiragi: "Kaede. I need to tell you something."
+Hiragi: (She sets the sketchbook down. Full attention. Great. No pressure.)
+<<vn_show_sprite "Kaede" "normal">>
+Hiragi: "I like you. Not the friend kind."
+(.............)
+Hiragi: (A silence long enough that I start regretting every choice that led to this moment.)
+<<vn_show_sprite "Kaede" "confused">>
+Kaede: "...I'm bad at saying stuff like this."
+<<vn_show_sprite "Kaede" "bigsmile">>
+<<play_voice "Kaede_ureshi">>
+Kaede: "But — same. I like you too."
+Hiragi: "...That's such a Kaede answer."
+<<vn_show_sprite "Kaede" "normal">>
+Kaede: "...Is that bad?"
+Hiragi: "No. It's perfect."
+<<vn_show_sprite "Kaede" "smile">>
+Hiragi: (She smiles — the real kind, rare and a little shy.)
+Hiragi: (We don't say much else after that. We don't really need to.)
+<<vn_hide_sprite>>
+
+<<load_scene>>
+
+===
+
+title: Kaede_BE
+
+---
+<<show_date_cutscene "Kaede_BE">>
+<<play_bgm "BE1">>
+<<vn_hide_sprite>>
+<<vn_set_background "sakura">>
+
+Hiragi: (Neither of us ever says it. We understand each other better than almost anyone — and somehow that's exactly what keeps us both too scared to risk it.)
+Hiragi: (Graduation comes fast. Kaede's waiting at the gate, sketchbook under her arm, same as always.)
+<<vn_show_sprite "Kaede" "smile">>
+<<play_voice "Kaede_matane">>
+Kaede: "...Take care of yourself."
+Kaede: "Let's stay friends. Good ones."
+Hiragi: "...Yeah. You too, Kaede."
+<<vn_hide_sprite>>
+Hiragi: (She nods, turns, and walks off without looking back.)
+<<play_sfx "walk">>
+Hiragi: (I watch until she's out of sight, and think, not for the first time, that I really should've said something.)
+
+<<load_scene>>
+
+===
+
+
+title: Inori_Day1
+
+---
+
+<<show_date_cutscene "Inori_day1">>
+<<play_bgm "daily4">>
+
+
+<<vn_set_background "gate afternoon">>
+<<vn_show_sprite "Inori" "normal">>
+
+Hiragi: (I told Inori I'd head home solo today. He's standing at the gate anyway, hands in his pockets, looking extremely unbothered for someone who was just stood up.)
+
+-> Ask why he's still there
+    <<set $inori_affection += 1>>
+    Hiragi: "Inori. I said I'd go home by myself today."
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "I know. Wanted to wait anyway."
+    Hiragi: "...You're like a cat that ignores the designated bed."
+    <<vn_show_sprite "Inori" "smile">>
+    Inori: "Is that a compliment?"
+    Hiragi: "Absolutely not."
+    <<vn_set_background "road afternoon">>
+    <<play_sfx "walk">>
+    <<vn_hide_sprite>>
+    Hiragi: (I end up walking home with him anyway. He looks way too pleased about winning.)
+    <<vn_hide_sprite>>
+    <<stop_sfx>>
+    <<jump Inori_Day2>>
+-> Ignore him, keep walking with Kaede
+    <<set $inori_affection -= 1>>
+    Hiragi: (I pretend not to see him. He catches up anyway.)
+    <<vn_show_sprite "Inori" "normal">>
+    Inori: "Heading home together?"
+    Hiragi: "Sorry, already made plans — told you, remember?"
+    <<vn_show_sprite "Inori" "bigsmile">>
+    <<play_voice "Inori_ok">>
+    Inori: "...Right. See you."
+    <<play_sfx "walk">>
+    Hiragi: (He waves and heads off. His back looks smaller than usual. I don't know why that bothers me.)
+    <<vn_hide_sprite>>
+    <<stop_sfx>>
+    <<jump Inori_Day2>>
+
+===
+
+title: Inori_Day2
+
+---
+
+
+<<show_date_cutscene "Inori_day2">>
+<<play_bgm "daily3">>
+<<vn_set_background "classroom day">>
+
+Hiragi: "Mm..."
+Hiragi: (I look at Inori)
+<<vn_show_sprite "Inori" "angry">>
+Hiragi: "You look like death. You sure you're fine?"
+Inori: "......"
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "I'm fine, don't worry about it."
+<<vn_hide_sprite>>
+Hiragi: (He is extremely not fine. I confirm this at break, finding him face-down on his desk in the classroom.)
+<<vn_show_sprite "Inori" "angry">>
+Hiragi: (I touch his forehead. It's like a furnace.)
+Inori: "...Your hand is warm.."
+<<vn_hide_sprite>>
+Hiragi: (He leans into my hand without any self-awareness whatsoever. Great. Fever brain.)
+-> Drag him to the infirmary
+    <<set $inori_affection += 2>>
+    Hiragi: "Up. We're going. No arguing."
+    <<vn_set_background "corridor day">>
+    <<play_sfx "walk">>
+    Hiragi: (I half-carry him there. He mumbles "thanks, Hiragi" into my shoulder the whole way, which is doing something to my heart rate that I'm choosing to ignore.)
+    <<vn_hide_sprite>>
+    <<stop_sfx>>
+    <<jump Inori_Day3>>
+-> Go buy him water and medicine
+    <<vn_hide_sprite>>
+    Hiragi: (I duck out for water and fever meds. When I get back—)
+    <<vn_show_sprite "Inori" "angry">>
+    Inori: "...You left."
+    Hiragi: (He says it like a kicked puppy.)
+    <<set $inori_affection -= 1>>
+    Hiragi: "I went to get you medicine, genius. Drink."
+    <<vn_show_sprite "Inori" "bigsmile">>
+    <<play_voice "Inori_arigato">>
+    Inori: "...Oh. Thank you."
+    <<set $inori_affection += 2>>
+    Hiragi: (Instant mood recovery. Concerning how fast that flipped.)
+    <<vn_hide_sprite>>
+    <<jump Inori_Day3>>
+
+===
+
+title: Inori_Day3
+
+---
+
+<<show_date_cutscene "Inori_day3">>
+<<play_bgm "daily4">>
+<<vn_set_background "courtyard day">>
+
+<<vn_show_sprite "Inori" "normal">>
+Hiragi: (Inori's cornered by a group of upperclassmen, nodding along politely, radiating the exact energy of someone counting ceiling tiles in his head.)
+Hiragi: (Then he sees me. Instant transformation.)
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Sorry — something came up."
+Hiragi: (He doesn't even glance back at them.)
+-> "You're pretty popular, huh..."
+    <<set $inori_affection += 1>>
+    Hiragi: "Wow, you're pretty popular, huh."
+    Hiragi: (It comes out sourer than intended. His grin goes wide immediately.)
+    <<vn_show_sprite "Inori" "smile">>
+    <<play_voice "Inori_donmai">>
+    Inori: "Is that jealousy I'm hearing?"
+    Hiragi: "Absolutely not. Let's just go eat."
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "Mm-hm. Sure it isn't."
+    Hiragi: (He does not let this go for the rest of lunch.)
+    <<vn_hide_sprite>>
+    <<jump Inori_Day4>>
+-> Say nothing
+    <<vn_set_background "classroom day">>
+    Hiragi: (I just walk to the classroom. He jogs to catch up, visibly deflated.)
+    <<vn_show_sprite "Inori" "normal">>
+    Inori: "...Not even going to ask what that was about?"
+    Hiragi: "Should I?"
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "...Forget it."
+    <<vn_hide_sprite>>
+    <<jump Inori_Day4>>
+
+
+===
+
+
+title: Inori_Day4
+
+---
+
+
+<<show_date_cutscene "Inori_day4">>
+<<play_bgm "daily4">>
+<<vn_set_background "road afternoon">>
+
+<<vn_show_sprite "Inori" "normal">>
+
+Hiragi: (....)
+Hiragi: (Walking home, I catch myself watching him a little too closely. Around everyone else, it's the same practiced smile, on a loop. Around me, it's different.)
+-> Ask him why
+    <<set $inori_affection += 2>>
+    Hiragi: "Hey. Why do you smile so much around everyone else?"
+    <<vn_show_sprite "Inori" "smile">>
+    Inori: "...Guess I got used to it. Everyone expects it."
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "With you, it's not like that. It's real."
+    Hiragi: "...I like this version better."
+    <<vn_hide_sprite>>
+    Hiragi: (He looks at me sideways, a little caught off guard, and doesn't say anything else — but he's smiling. The real one.)
+    <<jump Inori_EB>>
+-> Tease him about being a "brooding tragic hero"
+    <<set $inori_affection -= 2>>
+    Hiragi: "What, were you just born without the ability to laugh?"
+    <<vn_show_sprite "Inori" "smile">>
+    Inori: "......"
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "...Forget it."
+    <<play_sfx "walk">>
+    <<vn_hide_sprite>>
+    Hiragi: (He goes quiet the rest of the walk. Great job, me.)
+    <<stop_sfx>>
+    <<jump Inori_EB>>
+
+
+
+===
+
+title: Inori_EB
+
+---
+
+<<show_date_cutscene "Kaede_EB">>
+<<play_bgm "daily3">>
+<<vn_set_background "library afternoon">>
+
+Hiragi: (Inori heads out after homework, and I find his notebook left behind on the desk — way thicker than a school notebook has any business being.)
+Hiragi: "...Huh."
+Hiragi: (I could just text him about it. That'd be the normal thing to do.)
+Hiragi: (...But something about how heavy this thing is makes me hesitate.)
+Hiragi: (Whatever I decide here, I get the feeling there's no taking it back once it's done.)
+Hiragi: (...What should I do?)
+-> Look <<if $inori_affection >= 5>>
+    <<set $inori_affection += 5>>
+    <<set $read_notebook to true>>
+    Hiragi: (I open it. Every page is about me. What I like, what I hate, every gift he's given me, dated. A whole section labeled "things that make her smile.")
+    Hiragi: (That's — a lot.)
+    Hiragi: (The last page, smaller handwriting: "I know if you ever read this, you might think I'm disgusting. But please don't hate me...")
+    Hiragi: (I just stand there, notebook open, not sure what to feel.)
+    Hiragi: "......"
+    <<jump Inori_DecideEnding>>
+-> Don't look
+    <<set $inori_affection -= 1>>
+    <<set $read_notebook to false>>
+    Hiragi: (I slide it into my bag unopened, and hand it back the next day.)
+    <<play_sfx "schoolBell">>
+    <<vn_set_background "classroom day">>
+    Hiragi: (Break rolls around, and I catch him by his desk to hand it over.)
+    Hiragi: "Here. You left this at my place."
+    <<vn_show_sprite "Inori" "normal">>
+    Inori: "......"
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "Oh — thanks."
+    <<vn_show_sprite "Inori" "normal">>
+    Inori: "...."
+    Hiragi: (He takes it, flips through the first few pages like he's checking something, then glances up at me.)
+    Inori: "...You didn't look?"
+    Hiragi: "Nope. Figured it's just notes. Why would I?"
+    <<vn_show_sprite "Inori" "bigsmile">>
+    Inori: "...Okay. Thanks."
+    Hiragi: (Something about that exchange sits weird for the rest of the day.)
+    <<vn_hide_sprite>>
+    <<jump Inori_DecideEnding>>
+
+===
+
+title: Inori_DecideEnding
+
+---
+
+<<if $inori_affection > 4 && $read_notebook>>
+    <<jump Inori_HE1>>
+<<elseif $inori_affection > 4>>
+    <<jump Inori_HE2>>
+<<else>>
+    <<jump Inori_BE>>
+<<endif>>
+
+===
+
+title: Inori_HE1
+
+---
+
+<<show_date_cutscene "Kaede_BE">>
+<<play_bgm "HE1">>
+<<vn_set_background "sakura">>
+
+Hiragi: (I give the notebook back and act completely normal — but something's shifted. I start noticing everything he's ever quietly done for me, and slowly realize I feel something too.)
+Hiragi: (So this time, I go first. Right after graduation, I tell him everything — including that I read it, and none of it made me want to run.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "......"
+Hiragi: (He goes quiet, eyes glassy, and pulls me into a hug like he thinks I'll vanish otherwise.)
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "...You really read it. All of it."
+Hiragi: "All of it. Still here."
+<<vn_hide_sprite>>
+<<play_sfx "walk">>
+Hiragi: (We wait out the rest of school together. Once I graduate too, we're finally, properly together.)
+<<stop_sfx>>
+<<load_scene>>
+
+===
+
+title: Inori_HE2
+
+---
+
+<<show_date_cutscene "Kaede_BE">>
+<<play_bgm "HE2">>
+<<vn_set_background "sakura">>
+
+Hiragi: (I never find out what was in that notebook. Life goes on exactly as it always has — him steady beside me, same as ever.)
+Hiragi: (He waits until after graduation to finally say it.)
+<<vn_show_sprite "Inori" "normal">>
+Inori: "...I've liked you a long time, Hiiragi."
+Hiragi: "...Yeah. I think I already knew, somewhere."
+<<vn_show_sprite "Inori" "smile">>
+Inori: "That's it? No dramatics?"
+Hiragi: "We've had years of practice getting used to each other. Why start hesitating now?"
+<<vn_show_sprite "Inori" "bigsmile">>
+Hiragi: (He laughs, relief written all over him, and that's that.)
+Hiragi: "...."
+<<load_scene>>
+
+===
+
+title: Inori_BE
+---
+
+<<show_date_cutscene "Kaede_HE">>
+<<play_bgm "BE1">>
+<<vn_set_background "classroom day">>
+
+Hiragi: (I never look inside. I never come close to understanding what he's actually carrying.)
+Hiragi: (Bit by bit, without either of us really noticing, a wall goes up between us. Nothing dramatic — just a few more unanswered texts, a few more excuses not to walk home together.)
+Hiragi: (He never finds out if I looked and said nothing, or truly never wanted to know — and he never asks. He keeps the smile on and lets everything else quietly fall apart where I can't see it.)
+<<vn_set_background "sakura">>
+Hiragi: (Graduation day comes. He's there at the gate, same as always, that same easy smile in place.)
+<<vn_show_sprite "Inori" "bigsmile">>
+Inori: "Guess this is it, huh."
+Hiragi: "...Yeah. Guess so."
+<<vn_show_sprite "Inori" "normal">>
+Inori: "....."
+<<vn_show_sprite "Inori" "bigsmile">>
+<<play_voice "Inori_otsukare">>
+Inori: "...Take care of yourself, Hiiragi."
+Hiragi: (There's nothing wrong with the way he says it. Nothing I could point to. That's almost the worst part.)
+<<vn_hide_sprite>>
+Hiragi: "You too."
+<<play_sfx "walk">>
+Hiragi: (After graduation, he moves away for work. We still message, at first — then less, then barely at all.)
+Hiragi: (Every once in a while, in some crowded street, he still feels that same familiar gaze on the back of his neck — never quite sure anymore if it's real, or just a habit he can't put down.)
+<<stop_sfx>>
+<<load_scene>>
+
+
+
+
+===
+
+
+
+
+
+
+
+
+
+
+

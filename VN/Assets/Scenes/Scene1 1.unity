@@ -619,8 +619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -39}
-  m_SizeDelta: {x: 1032.6844, y: 1472.9224}
+  m_AnchoredPosition: {x: -1.484, y: -37.5157}
+  m_SizeDelta: {x: 1106.8932, y: 1475.8909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685256905
 MonoBehaviour:
@@ -810,7 +810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: NewYarnScript
+      value: Inori_BE
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -944,7 +944,7 @@ MonoBehaviour:
   - characterName: Inori
     expressions:
     - expressionName: normal
-      sprite: {fileID: -5069278982066889267, guid: a30c299c52b51954793a636ee747bf23, type: 3}
+      sprite: {fileID: -963134678918688176, guid: 2a400d7e5831c1841a83773260939bf9, type: 3}
     - expressionName: smile
       sprite: {fileID: 4669084094248447385, guid: 2505fe64113dca640babe943519442c1, type: 3}
     - expressionName: bigsmile
@@ -966,15 +966,106 @@ MonoBehaviour:
     sprite: {fileID: 4114691559368758000, guid: 0c20ed1cd45f06d49a4d78ace01aa3f0, type: 3}
   - backgroundName: road
     sprite: {fileID: -1664211973339187883, guid: 8ac5a86992ca0cb48aed25f5385efe8b, type: 3}
-  - backgroundName: road
-    sprite: {fileID: -1664211973339187883, guid: 8ac5a86992ca0cb48aed25f5385efe8b, type: 3}
+  - backgroundName: stairs day
+    sprite: {fileID: -8495340401443931349, guid: 6a1e8c7804aafbf4e8efd7b7ad96110e, type: 3}
+  - backgroundName: street
+    sprite: {fileID: 2179020895029537659, guid: 2a5b9b587a158d248ba8318383e2eb03, type: 3}
+  - backgroundName: cafe
+    sprite: {fileID: -1473400979730415497, guid: 5beba59f027a5fe4dbb4760d526d01b8, type: 3}
+  - backgroundName: cafeinner
+    sprite: {fileID: 7272974574959817926, guid: 66c8f0331e622bd43b34dfd4a84dbf98, type: 3}
+  - backgroundName: housePlayer
+    sprite: {fileID: 4430042292190886275, guid: 232c858ddf4d8ac489f9d549eb46fc90, type: 3}
+  - backgroundName: library afternoon
+    sprite: {fileID: 7961481445214888153, guid: 92876ddf3e7fbbc4c9ecbb911a04880a, type: 3}
+  - backgroundName: corridor afternoon
+    sprite: {fileID: 8360425273707527114, guid: b023c74f7b9854b4bbcba2abf9645138, type: 3}
+  - backgroundName: playerRoomN
+    sprite: {fileID: -8885647204644599005, guid: 6e5739cf0082f2e4089b84c35fe2b8b8, type: 3}
+  - backgroundName: gym day
+    sprite: {fileID: 3351714002443978154, guid: c5d86672e342ec94ea288c284d7770c5, type: 3}
+  - backgroundName: rooftop
+    sprite: {fileID: 4669740412730301770, guid: ccb8149b54c7e614cab67ca66912226d, type: 3}
+  - backgroundName: hall afternoon
+    sprite: {fileID: -2883302780376914323, guid: f00814941e42e65458a470dd437736c4, type: 3}
+  - backgroundName: station
+    sprite: {fileID: 1825700319286870186, guid: b6eb0b5c8fab98644a61e5b96647e8b7, type: 3}
+  - backgroundName: alley
+    sprite: {fileID: -6689896228501227288, guid: 8f0c1aee6fbbb8b439afeae3ff951979, type: 3}
+  - backgroundName: road afternoon
+    sprite: {fileID: -2486415515253569406, guid: 0bdb5d284dd4f8c43bb7fade8d0eeab1, type: 3}
+  - backgroundName: rooftop afternoon
+    sprite: {fileID: -5591903277441119307, guid: 9a5549e51a550ef419c1fd23c2e19729, type: 3}
+  - backgroundName: sakura
+    sprite: {fileID: 7270752051297259736, guid: d4318e601e856024d85139cfbc4c6d0b, type: 3}
+  - backgroundName: gate afternoon
+    sprite: {fileID: -2109791505755488166, guid: f74cbb49e31fffc409e6221bf40edbc2, type: 3}
+  - backgroundName: rooftop
+    sprite: {fileID: 4669740412730301770, guid: ccb8149b54c7e614cab67ca66912226d, type: 3}
   dateCutscenes:
   - cutsceneName: Day1
     background: {fileID: -2982798086813019253, guid: 3fe505c2f8eb64247863dda619da1873, type: 3}
     dateLabel: 3/4/2020
-  - cutsceneName: 
-    background: {fileID: 0}
-    dateLabel: 
+  - cutsceneName: Day2
+    background: {fileID: 3113110168656545276, guid: af6e8d25ba459c14fa73b90850a510e3, type: 3}
+    dateLabel: 4/4/2020
+  - cutsceneName: Day3
+    background: {fileID: -7617236060501834510, guid: 9f985bb91034e64479ad58ce2e13994f, type: 3}
+    dateLabel: 8/4/2020
+  - cutsceneName: Day4
+    background: {fileID: 7067643797855341280, guid: 5442853d108071344867d1eebf6196a6, type: 3}
+    dateLabel: 9/4/2020
+  - cutsceneName: Day5
+    background: {fileID: -3892093240934911624, guid: 24de864dd7707814dbf84efac1cba191, type: 3}
+    dateLabel: 10/4/2020
+  - cutsceneName: Day6
+    background: {fileID: 5715718609192439203, guid: e0ba242975c93b7468756c294fdf4b4c, type: 3}
+    dateLabel: 11/4/2020
+  - cutsceneName: Day7
+    background: {fileID: 669644112193340208, guid: 28ed1a6ea971e0f4e8c23b891bf0fc64, type: 3}
+    dateLabel: 12/4/2020
+  - cutsceneName: Day8
+    background: {fileID: -541463602044382502, guid: 7a630a7b3a2a4954e8adede765a02ceb, type: 3}
+    dateLabel: 13/4/2020
+  - cutsceneName: Day9
+    background: {fileID: 8514859483637832567, guid: e65576b0f17b91e4a8c941192de54e79, type: 3}
+    dateLabel: 30/4/2020
+  - cutsceneName: Kaede_day1
+    background: {fileID: -6090175909235350052, guid: ee8fd71e965ec1e4980225670e853834, type: 3}
+    dateLabel: 1/5/2020
+  - cutsceneName: Inori_day1
+    background: {fileID: -5085622921924249775, guid: 9c92c060f92ce9c4380db0849f35bdb0, type: 3}
+    dateLabel: 1/5/2020
+  - cutsceneName: Kaede_day2
+    background: {fileID: -6090175909235350052, guid: ee8fd71e965ec1e4980225670e853834, type: 3}
+    dateLabel: 15/5/2020
+  - cutsceneName: Kaede_day3
+    background: {fileID: -6090175909235350052, guid: ee8fd71e965ec1e4980225670e853834, type: 3}
+    dateLabel: 20/6/2020
+  - cutsceneName: Kaede_day4
+    background: {fileID: -6090175909235350052, guid: ee8fd71e965ec1e4980225670e853834, type: 3}
+    dateLabel: 8/7/2020
+  - cutsceneName: Kaede_EB
+    background: {fileID: 7654272231878461080, guid: bc1ced316d663084ea6329371497a81f, type: 3}
+    dateLabel: 8/9/2020
+  - cutsceneName: Kaede_HE
+    background: {fileID: -3074712795068796413, guid: 9b90c04ed6ba2464eba466ea800d06bb, type: 3}
+    dateLabel: 15/9/2020
+  - cutsceneName: Kaede_BE
+    background: {fileID: -3074712795068796413, guid: 9b90c04ed6ba2464eba466ea800d06bb, type: 3}
+    dateLabel: 1/3/2022
+  - cutsceneName: Inori_day2
+    background: {fileID: -5085622921924249775, guid: 9c92c060f92ce9c4380db0849f35bdb0, type: 3}
+    dateLabel: 15/5/2020
+  - cutsceneName: Inori_day3
+    background: {fileID: -5085622921924249775, guid: 9c92c060f92ce9c4380db0849f35bdb0, type: 3}
+    dateLabel: 20/6/2020
+  - cutsceneName: Inori_day4
+    background: {fileID: -5085622921924249775, guid: 9c92c060f92ce9c4380db0849f35bdb0, type: 3}
+    dateLabel: 8/7/2020
+  - cutsceneName: Inori_EB
+    background: {fileID: -5085622921924249775, guid: 9c92c060f92ce9c4380db0849f35bdb0, type: 3}
+    dateLabel: 8/9/2020
   - cutsceneName: 
     background: {fileID: 0}
     dateLabel: 
@@ -1023,6 +1114,24 @@ MonoBehaviour:
   - sfxName: schoolBell
     clip: {fileID: 8300000, guid: 285dfb6f9e349a341a122b25eba08f2b, type: 3}
     volume: 1
+  - sfxName: phonevibrate
+    clip: {fileID: 8300000, guid: 4e85bf80aed15b34ea6bde978146b4e9, type: 3}
+    volume: 0.385
+  - sfxName: cat angry
+    clip: {fileID: 8300000, guid: c3ca51d7b61519e4887b34f8bc4571fa, type: 3}
+    volume: 0.721
+  - sfxName: cat cute
+    clip: {fileID: 8300000, guid: c5b6f4abf9934e34da786dd7c0c4bc3c, type: 3}
+    volume: 0.762
+  - sfxName: phonevibrate
+    clip: {fileID: 8300000, guid: 4e85bf80aed15b34ea6bde978146b4e9, type: 3}
+    volume: 0.385
+  - sfxName: phonevibrate
+    clip: {fileID: 8300000, guid: 4e85bf80aed15b34ea6bde978146b4e9, type: 3}
+    volume: 0.385
+  - sfxName: phonevibrate
+    clip: {fileID: 8300000, guid: 4e85bf80aed15b34ea6bde978146b4e9, type: 3}
+    volume: 0.385
   voiceLines:
   - voiceId: Kaede_confused
     clip: {fileID: 8300000, guid: b67da257596cea744ab7b97db87a024c, type: 3}
@@ -1042,8 +1151,16 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2d90bb2808ebd4741b870dba18d0823f, type: 3}
   - voiceId: Inori_ok
     clip: {fileID: 8300000, guid: 152545fcdab2bbf468476ea102efa726, type: 3}
-  - voiceId: 
-    clip: {fileID: 0}
+  - voiceId: Kaede_konnichiwa
+    clip: {fileID: 8300000, guid: 47d68e6d1a88adc4b9b17ea8ce6ff7e9, type: 3}
+  - voiceId: Inori_donmai
+    clip: {fileID: 8300000, guid: dc5871f8acced394daaec20f1bf4fb2b, type: 3}
+  - voiceId: Inori_arigato
+    clip: {fileID: 8300000, guid: ce0fef521540a1b43b9ac7a518f5d021, type: 3}
+  - voiceId: Inori_iie
+    clip: {fileID: 8300000, guid: 17310d0910fe2e24a917d0082372102f, type: 3}
+  - voiceId: Inori_otsukare
+    clip: {fileID: 8300000, guid: 3693086ff6f829c45937de9926d8564d, type: 3}
   bgmSource: {fileID: 1562812312}
   sfxSource: {fileID: 1753334085}
   voiceSource: {fileID: 2001820752}
@@ -1094,7 +1211,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b0c2d280e919f5d4f84bd0fa0fb6f4e7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1e0fbff0034bac24991ba5d8eace75ec, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.219
   m_Pitch: 1

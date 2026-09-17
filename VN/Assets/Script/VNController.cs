@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class CharacterExpression
@@ -267,6 +268,18 @@ public static void StopSFX()
         Instance.voiceSource.clip = data.clip;
         Instance.voiceSource.Play();
     }
+
+[YarnCommand("load_scene")]
+public static IEnumerator LoadScene(float delaySeconds = 2f)
+{
+    yield return new WaitForSeconds(delaySeconds);
+
+    var variableStorage = Object.FindFirstObjectByType<InMemoryVariableStorage>();
+    if (variableStorage != null)
+        variableStorage.Clear();
+
+    SceneManager.LoadScene("MainMenu");
+}
 
 }
 
