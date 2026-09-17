@@ -5,6 +5,7 @@ using TMPro;
 public class SaveManager : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
+    public HistoryManager historyManager;  
 
     public GameObject savePanel;
     public GameObject loadPanel;
@@ -56,6 +57,12 @@ public class SaveManager : MonoBehaviour
         string saveDate = System.DateTime.Now.ToString("dd/MM/yyyy\nhh:mm tt");
         PlayerPrefs.SetString(slotName + "_Date", saveDate);
 
+        if (historyManager != null)
+        {
+            string historyData = historyManager.GetHistoryAsString();
+            PlayerPrefs.SetString(slotName + "_History", historyData);
+        }
+
         dialogueRunner.SaveStateToPersistentStorage(slotName);
         PlayerPrefs.Save();
 
@@ -77,12 +84,12 @@ public class SaveManager : MonoBehaviour
     private void LoadGame(string slotName)
     {
         dialogueRunner.LoadStateFromPersistentStorage(slotName);
+        string currentNode = PlayerPrefs.GetString(slotName + "_Node", "Start");
 
-        string currentNode = PlayerPrefs.GetString(
-            slotName + "_Node",
-            "Start"
-        );
-
+        if (historyManager != null)
+        {
+            historyManager.ResetHistory();
+        }
         dialogueRunner.StartDialogue(currentNode);
 
         Debug.Log("Game Loaded: " + slotName + " / " + currentNode);
